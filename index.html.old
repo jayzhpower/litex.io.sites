@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LITEX - Your Crypto Assets to Everything</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/ltx.png" rel="icon">
+  <link href="img/ltx_big.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="css/font.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="lib/cntl/css/cntl1.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+	.dropdown-menu > li > a {
+		color: #036EB4;
+		display: block;
+		padding: 10px 20px;
+		clear: both;
+		font-weight: 400;
+		line-height: 1.42857143;
+		white-space: nowrap;
+	}
+	
+	.dropdown-menu > li > a:hover {
+		color: #FFFFFF;
+		text-decoration: none;
+		background-color: #2AA0D8;
+	}
+  </style>
+  
+</head>
+
+<body>
+
+   <div style="position: fixed; bottom: 70px; right: 15px; height: 44px; width: 44px; background: url(img/telegram.png) no-repeat; -webkit-background-size: contain; background-size: contain; z-index: 999;"><a href="https://t.me/litex_official" style="display: block; height: 44px; width: 44px; cursor: pointer;"></a></div>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" class="header-scrolled">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left" style="margin-top: -5px;padding-left: 1rem;">
+        <h1><a href="#intro" class="scrollto"><img src="img/logo_big_black.png" style="height: 42px; margin-bottom: 8px; margin-left: -10px;" /></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#about">Advantages</a></li>
+          <li><a href="#facts">Roadmap</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#testimonials">Partners</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url('img/intro-carousel/3.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content" style="width: 100%;">
+                <h2>Your Crypto Assets to Everything</h2>
+                <div style="padding-bottom: 20px;"><img src="img/image.png" style="display: none;" id="flow_img_id"></div>
+				
+				<div class="btn-group">
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="position: relative; background: #036EB4; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">
+						White Paper Draft <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" style="width: 100%;">
+						<li><a href="/wp_en.pdf" target="_blank">English Version</a></li>
+						<li><a href="/wp_zh-CN" target="_blank">Chinese Version</a></li>
+					</ul>
+				</div>
+				
+                <!-- <a href="/whitepaper" target="_blank" style="position: relative; background: #036EB4; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">White Paper Draft</a> 
+                <a href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="comming soon" style="position: relative; background: #878787; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">Yellow Paper Draft</a> -->
+				
+				<button type="button" class="btn yellow-paper-draft" data-toggle="tooltip" data-placement="bottom" title="comming soon" style="position: relative; background: #878787; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">Yellow Paper Draft <span class="caret"></span></button>
+				
+				<div style="padding-top: 1rem;">
+                <a href="/litex_ltxn" target="_blank" style="position: relative; border: 0; padding: 10px 15px; color: #B9E0A5; transition: 0.4s; cursor: pointer; z-index: 2;">[ Into PPT ]</a>
+				</div>
+              </div>
+              <div id="large-header" style="position: absolute; z-index: 1;">
+                <canvas id="demo-canvas"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+	<!--==========================
+      Advantages Section
+    ============================-->
+    <section id="about" class="listen">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Highlights</h3>
+          <p>
+            LITEX is a completely decentralized payment ecosystem for cryptocurrency.<br />
+            Built on LTXN（LITEX Network), Litex supports  instant  micropayments  with extreme low service charge.
+          </p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img" style="text-align:center;">
+                <img src="img/decentralized_1.jpg" alt="" class="img-fluid" />
+              </div>
+              <h2 class="title" style="font-size: 18px; margin-top: 23px;"><a href="#">Acceptance and application</a></h2>
+              <p>
+                With the resources in the payment industry, LITEX ecosystem can easily spread out to various merchants all over the world, as they do not need to make any changes in their current settlement procedure. Making LITEX acceptable on a wide range.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img" style="text-align:center;">
+                <img src="img/security_1.jpg" alt="" class="img-fluid" />
+              </div>
+              <h2 class="title" style="font-size: 18px; margin-top: 23px;"><a href="#">Stability and security</a></h2>
+              <p>
+                Stability is securely insured by LTXN and its Smart Contracts. The payment channels are built on smart contracts, which have strict rules of accessing the assets. The balances are locked in the channel. No capital loss would accrue even if the network is attacked.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img" style="text-align:center;">
+                <img src="img/quickly_1.jpg" alt="" class="img-fluid" />
+              </div>
+              <h2 class="title" style="font-size: 18px; margin-top: 23px;"><a href="#">Fast and Cheap</a></h2>
+              <p>
+                With the increasing nodes in the LTXN, LITEX has the ability to handle millions transactions per second, with extremely low transaction fee. LITEX aims to provide the best crypto payment experiences to every crypto currency users.
+              </p>
+              <div style="height: 1.5rem;"></div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-vision.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="title"><a href="#">Accessibility of merchants</a></h2>
+              <p>
+                Merchants do not need to make any changes in their current payment gateway. In the user end, the process of using the LITEX to collect money is exactly the same, there’s no risk associating with value change in cryptocurrency for acquirers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-vision.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="title"><a href="#">Eliminated the risk of losing centralized capital</a></h2>
+              <p>
+                The payment channels are built on smart contract, which have strict rules of using the assets. The balances are stored in the channel, no capital loss would accrue even if it is being attacked with third party.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-vision.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="title"><a href="#">decentralized payment ecosystem</a></h2>
+              <p>
+                LITEX is a centralization of the digital money instant payment solution, which has the characteristics of supporting small and micro payments, instant to account, and no formalities.
+              </p>
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Roadmap Section
+    ============================-->
+    <section id="facts"  class="section-bg listen" style="background: url(img/routemap-bg.png) center top no-repeat fixed; background-size: cover; padding: 60px 0 40px 0; position: relative;">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Roadmap</h3>
+        </header>
+
+        <div class="row">
+
+          <div class="cntl">
+			<span class="cntl-bar cntl-center" style="margin-top: 2px;" >
+				<span class="cntl-bar-fill" style="height: 100%;"></span>
+			</span>
+
+            <div class="cntl-states">
+
+              <div class="cntl-state cntl-animate wow fadeInUp">
+                <div class="cntl-content" style="background: #fff; box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); border: none; opacity:1; margin-left:1%; margin-right:1%;">
+                  <h4>2017Q4 ~ 2018Q1</h4>
+                  <p>
+                  Design the system  architecture.<br />
+                  Test  the  basic functions of the BOLT protocol.<br />
+                  Consult with acquiring parties.
+                  </p>
+                </div>
+                <div class="cntl-icon cntl-center" style="font-family: Vani; font-size: 2rem; line-height: 3.6rem;">1</div>
+              </div>
+
+
+              <div class="cntl-state cntl-animate wow fadeInUp ">
+                <div class="cntl-content" style="background: #fff; box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); border: none; opacity:1; margin-left:1%; margin-right:1%;">
+                  <h4>2018Q2 ~ 2018Q4</h4>
+                  <p>
+                  Launch LITEX payment APP.<br />
+                  Complete the LTXN architecture and test the theories.<br />
+                  Connect the acquiring parties and service providers to test.
+                  </p>
+                </div>
+                <div class="cntl-icon cntl-center" style="font-family: Vani; font-size: 2rem; line-height: 3.6rem;">2</div>
+              </div>
+
+              <div class="cntl-state cntl-animate wow fadeInUp">
+                <div class="cntl-content" style="background: #fff; box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); border: none; opacity:1; margin-left:1%; margin-right:1%;">
+                    <h4>2019Q1 ~ 2019Q3</h4>
+                  <p>
+                  Launch the Alpha version of LTXN.<br />
+                  Launch the official LITEX payment APP.<br />
+                  Connect the merchants.<br />
+                  Expand the acquiring parties.<br />
+                  Test run of transaction. 
+                  </p>
+                </div>
+                <div class="cntl-icon cntl-center" style="font-family: Vani; font-size: 2rem; line-height: 3.6rem;">3</div>
+              </div>
+
+              <div class="cntl-state cntl-animate wow fadeInUp">
+                <div class="cntl-content" style="background: #fff; box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); border: none; opacity:1; margin-left:1%; margin-right:1%;">
+                  <h4>2019Q4 ~ 2020Q2</h4>
+                  <p>
+                  Launch the Beta version of LTXN.<br />
+                  Complete the safety test.<br />
+                  Open LITEX's official paymeny Software Development Kit.<br />
+                  Further expand  acquiring parties.
+                  </p>
+                </div>
+                <div class="cntl-icon cntl-center" style="font-family: Vani; font-size: 2rem; line-height: 3.6rem;">4</div>
+              </div>
+
+              <div class="cntl-state cntl-animate wow fadeInUp">
+                <div class="cntl-content" style="background: #fff; box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); border: none; opacity:1; margin-left:1%; margin-right:1%;">
+                    <h4>2020Q3 ~ 2020Q4 </h4>
+                  <p>
+                  Upgrade the APP, SDK and LTXN constantly.<br />
+                  Incease the application scene.<br />
+                  Merchants are connected in large scale.<br />
+                  Constantly expand acquiring parties cooperation to enhance the  stability of service.
+                  </p>
+                </div>
+                <div class="cntl-icon cntl-center" style="font-family: Vani; font-size: 2rem; line-height: 3.6rem;">5</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="listen">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>Team</h3>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member" style="border-radius: 50%;">
+              <img src="img/team-4.jpg" class="img-fluid" alt="" style="border-radius: 50%;" />
+              <div class="member-info" style="border-radius: 50%;" >
+                <div class="member-info-content">
+                  <h4>Guanghong Xu</h4>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center;margin-bottom: 20px;">
+              A PKU alumni who has 22 years of experience in a wide range of technology and business areas with a focus on providing strategic advisory services in risk management, information security, privacy and data protection, public key infrastructure (PKI) encryption and payment card process review in healthcare and financial industries across the globe.
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member" style="border-radius: 50%;">
+              <img src="img/team-1.jpg" class="img-fluid" alt="" style="border-radius: 50%;">
+              <div class="member-info" style="border-radius: 50%;">
+                <div class="member-info-content">
+                  <h4>Wang Shuobin</h4>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center;margin-bottom: 20px;">
+              Bachelor (2003-2007) and master (2007-2010) in Computer Science of Peking University, former product operation director of the star product "Non-bank card payment" of Yeepay, serial entrepreneur, executive director of CEO club in Peking University, revivalist and practitioner of block chain technique.
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member" style="border-radius: 50%;">
+              <img src="img/team-2.jpg" class="img-fluid" alt="" style="border-radius: 50%;" />
+              <div class="member-info" style="border-radius: 50%;" >
+                <div class="member-info-content">
+                  <h4>Zhang Huaqiang</h4>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center;margin-bottom: 20px;">
+              Bachelor (2003-2007) and master (2007-2010) in Computer Science of Peking University, expert in blockchain and network security, full stack engineer, designer of the "Composite decision lightning network" model, used to work as an senior research and development engineer in platforms such as IBM and Sina weibo.
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member" style="border-radius: 50%;">
+              <img src="img/team-3.jpg" class="img-fluid" alt="" style="border-radius: 50%;" />
+              <div class="member-info" style="border-radius: 50%;" >
+                <div class="member-info-content">
+                  <h4>Lou Huanqing</h4>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center;margin-bottom: 20px;">
+              Bachelor (2007-2011) and master (2011-2014) in Computer Science of Peking University expert in blockchain, project structure engineer, full stack engineer, with abundant project experience, good at designing solutions by combining product demands and cutting edge technology.
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member" style="border-radius: 50%;">
+              <img src="img/team-5.jpg" class="img-fluid" alt="" style="border-radius: 50%;" />
+              <div class="member-info" style="border-radius: 50%;" >
+                <div class="member-info-content">
+                  <h4>Chu Tianshu</h4>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center;margin-bottom: 20px;">
+              Founding partner and vice president of Duolabao, former product operation director of the non-bank card payment project of Yeepay, former product manager of the founding team of Baidu Shenbian, Bachelor and master in computer science and technology, Beijing University of Aeronautics and Astronautics. Duolabao is a domestic leading offline payment and marketing enterprise, top three Wechat payment service provider. The payment and transactions exceed 2 million each day
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      investor and advisor Section
+    ============================-->
+    <section id="testimonials" class="section-bg wow fadeInUp listen">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>advisor</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+
+			<div class="testimonial-item">
+            <img src="img/advisor-3.jpg" class="testimonial-img" alt="">
+            <h3>Jeffrey Wernick</h3>
+            <h4>advisor</h4>
+            <p style="overflow-y: auto; height: 200px;">
+              Jeffrey has 40 years of experience include investments in Uber and Airbnb, after which he turned his focus to bank transactions, lending platforms, and the blockchain industry. His advisory role will help guide LITEX's international growth and development strategies. Jeffrey began his career trading options and futures while studying at the University of Chicago. He later worked at Salomon Brothers, then became the youngest Senior Officer at the National Bank of Detroit. Jeffrey then launched a technology-focused venture capital firm and created a hedge fund to invest in distressed and bankrupt companies, helping to restructure their balance sheets. As an angel investor, his focus expanded to the sharing economy, biomedical, and blockchain technologies.
+            </p>
+          </div>
+		  
+		  <div class="testimonial-item">
+            <img src="img/advisor-2.jpg" class="testimonial-img" alt="">
+            <h3><a href="https://www.chicagobooth.edu/faculty/directory/c/lin-william-cong" target="_blank">Lin William Cong</a></h3>
+            <h4>advisor</h4>
+            <p style="overflow-y: auto; height: 200px;">
+              Lin William Cong is a professor of Finance and PhD advisor at the University of Chicago, and a faculty affiliate at the Center for East Asian Studies. His main research fields are dynamic corporate finance and information economics. His research interests include financial innovation and technology, real options, information and mechanism design, entrepreneurial finance, capital market imperfections, and China's economy and financial system. For his work, Cong has received the Finance Theory Group Best Paper Award, the Shmuel Kandel Award, and the Zephyr Prize for Best Paper in Corporate Finance, amongst other honors and fellowships. He was also a George Shultz Scholar at the Stanford Institute for Economic Policy Research and a Doctoral Fellow at the Stanford Institute for Innovation in Developing Economies. Additionally, his undergraduate research in physics and applied mathematics resulted in publications in a variety of science journals. Cong currently serves as an advisor for the Wall Street Blockchain Alliance (non-profit), and a member of multiple professional organizations such as the American Economic Association and the Econometric Society.<br />
+			  Cong earned a Ph.D. in finance and a MS in statistics from Stanford University, where he received the Gerald Lieberman Fellowship for outstanding contributions in research, teaching, and university service, and the Asian American Award for graduate leadership. He also holds dual degrees from Harvard University where he graduated top in Physics in 2009 with summa cum laude and Phi Beta Kappa, receiving an A.M. in physics, an A.B. in math & physics, a minor in economics, and a language citation in French.<br />
+			  Cong is a native of Shenyang, China. Outside his research and teaching, Cong practices Chinese Calligraphy, and enjoys reading, sports, cross fitness, guitar, as well as learning French and Japanese. Cong is also passionate about technological innovations, education in China and in the U.S., and integrating quantitative and fundamental approaches to investments in various asset classes, to which he first coined the term "Quantimental Investing" in 2014.
+            </p>
+          </div>
+		
+          <div class="testimonial-item">
+            <img src="img/advisor-1.jpg" class="testimonial-img" alt="">
+            <h3>Chen Bin</h3>
+            <h4>advisor</h4>
+            <p style="overflow-y: auto; height: 200px;">
+              Chen Bin is the former architect of Paypal. In 1989, he obtained a master’s degree from Jilin University. Afterwards, he once worked as director of integration for Hitachi U.S. system, chief architect of Abacus, chief engineer of the Nokia U.S. network application, which provided him with rich oversea experiences and years of experience in architecture of payments industry. He has translated and published many works such as “The Architecture and Its Future”, “Scripture of Architecture”, and “Big Data Is The Future - Road of King”, which makes him a practitioner and evangelist of the cutting-edge network technology
+            </p>
+          </div>
+
+          <!-- <div class="testimonial-item">
+            <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+            <h3><a href="http://huangqundl.github.io/" target="_blank">黄群</a></h3>
+            <h4>Designer</h4>
+            <p style="overflow-y: auto; height: 200px;">
+              Huan Qun is an Associate Professor at Institute of Computing Technology, Chinese Academy of Sciences (ICT-CAS), supported by CAS Pioneer Hundred Talents Program（中科院率先行动“百人计划”. Before joining ICT, he was a Researcher at Huawei Future Network Theory Lab in Hong Kong from September 2015 to September 2017. He got his Ph.D. degree in August 2015 in Department of Computer Science and Engineering (http://www.cse.cuhk.edu.hk/), The Chinese University of Hong Kong (http://www.cuhk.edu.hk/), advised by Professor Patrick P. C. Lee (http://www.cse.cuhk.edu.hk/~pclee). He received his bachelor degree in Computer Science from Peking University (http://www.pku.edu.cn/) in 2011.
+              *Research interests:*
+              His research mainly focuses on distributed stream processing and network measurement. He's also interested in areas including distributed systems, computer networks, operating systems, cloud computing, randomized algorithms and machine learning.
+            </p>
+          </div>-->
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+    <!--==========================
+Clients Section
+============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>investor</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+        </div>
+
+      </div>
+    </section><!-- #clients -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp listen">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+          <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
+        </div>
+
+        <div class="row contact-info">
+
+          <!-- <div class="col-md-6"> -->
+            <!-- <div class="contact-address"> -->
+              <!-- <i class="ion-ios-location-outline"></i> -->
+              <!-- <h3>Address</h3> -->
+              <!-- <address>SOHO No. 8, Haidian North Second Street, Zhongguancun, Haidian District, Beijing, China</address> -->
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <div class="col-md-12">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:contact@litex.io">contact@litex.io</a></p>
+            </div>
+          </div>
+          
+          <div class="col-md-12" style="text-align: center;">
+            <!--<div>-->
+              <!--<img src="img/qrcode.png" style="width: 10rem;" />-->
+            <!--</div>-->
+            <a href="http://weibo.com/litexlxt" >
+              <img src="img/weibo.png" style="width:50px;" />
+            </a>
+            <a href="https://t.me/litex_official" style="margin-left: 10px;">
+              <img src="img/telegram.png" style="width:50px;" />
+            </a>
+            <!--<a href="https://t.me/litex_io">Telegram</a>-->
+            <!--<a href="https://t.me/litex_cn">Telegram</a>-->
+            <a href="http://twitter.com/litex_io" style="margin-left: 10px;">
+              <img src="img/twitter.png" style="width:50px;" />
+            </a>
+            <a href="http://facebook.com/litex.io" style="margin-left: 10px;">
+              <img src="img/facebook.png" style="width:50px;" />
+            </a>
+            <a href="https://medium.com/@litex" style="margin-left: 10px;">
+              <img src="img/medium.png" style="width:50px;" />
+            </a>
+          </div>
+
+        </div>
+
+        <!--<div class="form">-->
+          <!--<div id="sendmessage">Your message has been sent. Thank you!</div>-->
+          <!--<div id="errormessage"></div>-->
+          <!--<form action="" method="post" role="form" class="contactForm">-->
+            <!--<div class="form-row">-->
+              <!--<div class="form-group col-md-6">-->
+                <!--<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />-->
+                <!--<div class="validation"></div>-->
+              <!--</div>-->
+              <!--<div class="form-group col-md-6">-->
+                <!--<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />-->
+                <!--<div class="validation"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+              <!--<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />-->
+              <!--<div class="validation"></div>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+              <!--<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>-->
+              <!--<div class="validation"></div>-->
+            <!--</div>-->
+            <!--<div class="text-center"><button type="submit">Send Message</button></div>-->
+          <!--</form>-->
+        <!--</div>-->
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <!-- <div class="footer-top"> -->
+      <!-- <div class="container"> -->
+        <!-- <div class="row"> -->
+
+          <!-- <div class="col-md-12" style="font-size: 32px; text-transform: uppercase; text-align: center; font-weight: 700; position: relative; padding-bottom: 15px;"> -->
+              <!-- get connected -->
+          <!-- </div> -->
+
+          <!-- <div class="col-md-12" style="text-align: center;"> -->
+            
+            <!-- <a href="http://weibo.com/litexlxt" > -->
+              <!-- <img src="img/weibo.png" style="width:50px;" /> -->
+            <!-- </a> -->
+            <!-- <a href="https://t.me/litex_official" style="margin-left: 10px;"> -->
+              <!-- <img src="img/telegram.png" style="width:50px;" /> -->
+            <!-- </a> -->
+            <!-- <a href="http://twitter.com/litex_io" style="margin-left: 10px;"> -->
+              <!-- <img src="img/twitter.png" style="width:50px;" /> -->
+            <!-- </a> -->
+            <!-- <a href="http://facebook.com/litex.io" style="margin-left: 10px;"> -->
+              <!-- <img src="img/facebook.png" style="width:50px;" /> -->
+            <!-- </a> -->
+            <!-- <a href="https://medium.com/@litex" style="margin-left: 10px;"> -->
+              <!-- <img src="img/medium.png" style="width:50px;" /> -->
+            <!-- </a> -->
+          <!-- </div> -->
+
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>LITEX</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- draw canvas -->
+  <script src="js/EasePack.min.js"></script>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/demo-1.js"></script>
+  
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <script type="text/javascript">
+      function isMobile() {
+          var userAgentInfo = navigator.userAgent;
+
+          var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+
+          var mobile_flag = false;
+
+          //根据userAgent判断是否是手机
+          for (var v = 0; v < mobileAgents.length; v++) {
+              if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+                  mobile_flag = true;
+                  break;
+              }
+          }
+
+          var screen_width = window.screen.width;
+          var screen_height = window.screen.height;
+
+          //根据屏幕分辨率判断是否是手机
+          if(screen_width < 500 && screen_height < 800){
+              mobile_flag = true;
+          }
+
+          return mobile_flag;
+      }
+      
+      function sync() {
+        var windowHeight = window.innerHeight;
+        
+        $("section.listen").each(function(){
+            var offset = $(this)[0].getBoundingClientRect()
+            if( offset.bottom + 10 > windowHeight * 0.1 && offset.top < windowHeight * 0.5 ) {
+                var id = $(this).attr('id')
+                $("ul.nav-menu li").removeClass('menu-active');
+                $("ul.nav-menu").find("a[href='#"+id+"']").parent('li').addClass('menu-active')
+                return false;
+			} else {
+                var id = $(this).attr('id')
+                $("ul.nav-menu").find("a[href='#"+id+"']").parent('li').removeClass('menu-active');
+            }
+        })
+    }
+
+      $(document).ready(function(e) {
+
+            sync()
+      
+            var mobile_flag = isMobile();
+            var w = document.body.clientWidth;
+			
+            if(!mobile_flag) {
+                init();
+                $("#flow_img_id").attr('style', 'width:'+ ((w / 1.8)) +'px;')
+            } else {
+                $("#flow_img_id").attr('style', 'width: 100%;');
+				
+				if(w < 350) {
+					$(".yellow-paper-draft").css({"margin-top":"1rem", "padding":"10px 21px"});
+				}
+				
+            }
+          
+            window.addEventListener( 'scroll', sync, false );
+			
+			$("[data-toggle='tooltip']").tooltip();
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,600 @@
+<html>
+ <head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  
+  <link href="css/main.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+ </head>
+ <body style="padding-left: 25rem;">
+ 
+     <nav class="toc" style="width: 22rem;font-size: 12px;height: 100%;overflow-y: auto;top: 0;left: 0; background: rgba(0, 0, 0, 0.9);color: #fff;font-family: 'Montserrat',sans-serif; font-weight: 700;">
+        <ul>
+            <li class="visible"><a href="#h.src6gtzfl7zo" style="border-left: 4px solid #18d26e;padding-left: 3px;">摘要</a></li>
+            <li class="visible">
+                <a href="#h.mexs97rd72om">项目背景</a>
+                <ul>
+                    <li class=""><a href="#h.5lcuvcdk3l">加密货币现状</a></li>
+                    <li class=""><a href="#h.fbva4igam70l">小微支付难题——以比特币为例</a></li>
+                    <li class=""><a href="#h.tjvyv4c6gln2">比特币的曙光——闪电网络（Lightning Network）</a></li>
+                </ul>
+            </li>
+            <li class="visible"><a href="#h.4iw42j5a3www">关键问题：如何落地</a></li>
+            <li class="visible">
+                <a href="#h.btqg8xj31xv3">解决方案演变</a>
+                <ul>
+                    <li class=""><a href="#h.6jwnhj13shbj">阶段一：中心化解决方案——代表产品BitPay</a></li>
+                    <li class=""><a href="#h.dqvhv68yq6ke">阶段二：半中心化的解决方案——代表产品TenX </a></li>
+                    <li class=""><a href="#h.j8brtw613uol">阶段三：去中心化的解决方案——LITEX</a></li>
+                    <li class=""><a href="#h.ol7zcv4ynv27">最终阶段：用加密货币完成交易闭环</a></li>
+                </ul>
+            </li>
+            <li class="visible">
+                <a href="#h.1nideq56iaqq">去中心化的支付解决方案——LITEX</a>
+                <ul>
+                    <li class=""><a href="#h.au8n9phfam30">概念定义</a></li>
+                    <li class="">
+                        <a href="#h.mljajs10yx9u">方案设计</a>
+                        <ul>
+                            <li class=""><a href="#h.3ymva79d8awv">LITEX 架构</a></li>
+                            <li class=""><a href="#h.5kpbsck15ny5">LTXN概述 </a></li>
+                        </ul>
+                    </li>
+                     <li class="">
+                        <a href="#h.45p567ou3iyf">技术创新</a>
+                        <ul>
+                            <li class=""><a href="#h.6r3ifb39vntm">复合决策闪电网络模型</a></li>
+                            <li class=""><a href="#h.i51wy9c9nqgt">匹配引擎</a></li>
+                            <li class=""><a href="#h.mrigmma78ulb">智能路由</a></li>
+                            <li class=""><a href="#h.gxutnfu7pctq">轻结点</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="visible"><a href="#h.n7andb49khaf">应用场景</a></li>
+            <li class="visible">
+                <a href="#h.8hi57ch5ixmn">代币系统设计</a>
+                <ul>
+                    <li class=""><a href="#h.nlmv8my2txws">名称与设计目标</a></li>
+                    <li class="">
+                        <a href="#h.1jvzkw6ukg7f">LXT 经济体系</a>
+                        <ul>
+                            <li class=""><a href="#h.obhwm14fh7fu">产生和消灭</a></li>
+                            <li class=""><a href="#h.rie8sf7o146f">供给和需求</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="#h.n9i6ardetds9">LXT发行计划</a></li>
+                </ul>
+            </li>
+            <li class="visible"><a href="#h.lnlrnqw8greb">项目规划</a></li>
+            <li class="visible">
+                <a href="#h.3gvecoukx004">组织架构介绍</a>
+                <ul>
+                    <li class=""><a href="#h.7j48jbfcf4s">LITEX 社区基金会</a></li>
+                    <li class=""><a href="#h.b8swysir6jpw">核心团队</a></li>
+                    <li class=""><a href="#h.yywncfkfs2yt">合作伙伴团队</a></li>
+                    <li class=""><a href="#h.h59lhbpr4t1l">基石投资人及顾问</a></li>
+                </ul>
+            </li>
+            <li class="visible">
+                <a href="#h.oh4d4oj3cln4">风险声明</a>
+                <ul>
+                    <li class=""><a href="#h.t8oi7bmhp3m2">风险提示</a></li>
+                    <li class=""><a href="#h.2yyhhodfezve">免责声明</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+ 
+  <div>
+   <p class="c10"><span class="c2 c20"></span></p>
+  </div>
+  <p class="c67 c78 title" id="h.aidx6na9vmfw"><span class="c86">LITE</span><span class="c82">X</span><span class="c53 c19 c35 c63">&nbsp;- 去中心化加密货币支付</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0 start" start="1">
+   <li class="c51"><h2 id="h.src6gtzfl7zo" style="display:inline"><span class="c0">摘要</span></h2></li>
+  </ol>
+  <p class="c11"><span class="c1">经过近几年的发展，加密货币（Cryptocurrency）的币值和种类都有了很大的增长，也引发了许多社会关注，但是应用场景仍然非常有限。一方面，加密货币转账越来越慢、手续费越来越高，小微支付（Micropayment）变成了难题；另一方面，理解和接受加密货币对知识储备的要求过高，能够做到的商户凤毛麟角，投机涌入引发的巨额币值波动让商户面临着极大的风险，几天内营收缩水50%足以导致资金链断裂的灾难。很显然，只有对商户</span><span class="c1">实时结算法币</span><span class="c1">，对用户</span><span class="c1">提速降费</span><span class="c1">，加密货币才能真正融入人们的日常生活。更进一步，就像比特币</span><span class="c1">没有官方运营商</span><span class="c2 c1">一样，支付过程中也不能出现将加密货币兑换成法币向商户统一结算的官方组织，否则整个支付生态的命运将由该组织的运营状况决定，既无法快速发展，也不能长久运行，更不符合区块链生态化、去中心化的理念。</span></p>
+  <p class="c11"><span class="c1">随着使用量的上升，主流加密货币主网越发拥堵，到账慢、手续费高等问题让它们变得越来越不适合流通。一部分团队主张通过增加区块大小和缩短出块时间等方式新建一些公链，但这只能缓解而无法根治：为了保证足够多的矿工能负担得起存储和网络要求，区块扩容和出块提速都有限度，否则去中心化结构会被破坏，而交易量的增长是加速的，天花板会很快达到。其实可预见的交易增长中很大部分都会是小额交易，这些交易无法承受高额手续费，但往往又要求快速到账，如果能在保障安全的前提下把它们放到链外进行，主链只对最终结果进行确认，就能够适应交易量的不断增长。</span><span class="c19">闪电网络</span><span class="c2 c1">就是这样一种技术方案，通过BOLT协议中描述的RSMC和HTLC两个智能合约，闪电网络让链下交易与链上具有同样的安全性，而且交易速度更快、手续费更低，是目前最有前景的升级方案。</span></p>
+  <p class="c11"><span class="c1">隔离见证（SegWit）激活后，比特币闪电网络进展很快，关注支付领域的团队也随即跟进设计了一些产品方案，但是鲜有将法币结算考虑进去的。即便少数提及法币的方案，也是在二级市场兑换法币后自建资金池，统一向商户结算。因此无论是最早、最大的BitPay，还是TenX等曾与Visa发行联名卡</span><sup class="c1"><a href="#ftnt1" id="ftnt_ref1">[1]</a></sup><span class="c1">的方案，以及在Visa宣布停止合作</span><sup class="c1"><a href="#ftnt2" id="ftnt_ref2">[2]</a></sup><span class="c2 c1">后，不考虑落地难度而自行铺设Pos机硬件、自行发卡的方案，都绕不开到交易所兑换法币的步骤，而这让中心化风险无法避免：首先，交易所本身并不稳定，黑客攻击或者自行宕机时有发生，依赖交易所的支付方案不但会受到牵连导致服务停摆，其在交易所的加密货币资产更是有全损的风险；其次，to B结算作为方案的一环会导致官方运营商的必然存在，一旦运营出现问题，整个支付生态将无法运转，还可能给用户和商户带来资金损失。因此，一个稳定持久的加密货币支付方案，其法币结算环节必须去中心化。</span></p>
+  <p class="c18 c25 c34"><span class="c5">LITE</span><span class="c8">X </span><span class="c1">是</span><span class="c19">完全去中心化</span><span class="c1">的加密货币支付生态。以易宝支付明星产品 ——「非银行卡支付」的业务模型以及BOLT协议为基础，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">团队设计了</span><span class="c5">LTXN</span><span class="c1">（</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;</span><span class="c5">Network</span><span class="c1">），实现了购币者为消费者</span><span class="c19">代付法币</span><span class="c2 c1">给商户、消费者向购币者偿付加密货币的流程。这一流程由智能合约保障，且不需要中心化运营组织参与。</span></p>
+  <p class="c18 c25 c34"><span class="c1">在 </span><span class="c5">LTXN</span><span class="c8">&nbsp;</span><span class="c2 c1">的架构里，上层由决策网络匹配消费者的支付请求和购币者的购币请求，下层由闪电网络等建立安全高效的支付通路传递加密货币，商户端通过收单方完成购币者为消费者代付法币的结算。上层决策网络还通过激励反馈等策略，在提高网络效率的同时抑制闪电网络的中心化倾向。</span></p>
+  <p class="c18 c25 c34"><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">的优势：</span></p>
+  <ul class="c13 lst-kix_qqhv5w2qc2b8-0 start">
+   <li class="c6 c9"><span class="c59">去中心化生态：</span><span class="c2 c1">系统中法币由购币者提供，生态各方共享手续费收益，不需要依赖交易所等中心化机构，也不存在法币资金池和官方运营商；</span></li>
+   <li class="c6 c9"><span class="c59">高性能低成本：</span><span class="c2 c1">随着网络结点数增加，处理能力可达每秒百万笔，满足日常支付时效性要求的同时做到极低的手续费；</span></li>
+   <li class="c18 c9"><span class="c59">落地深入稳定：</span><span class="c2 c1">基金会及合作团队具有深厚的支付行业经验和资源，可以迅速推动全球收单方加入生态共享红利，避免与银行卡组织合作产生的不稳定因素；</span></li>
+   <li class="c18 c9"><span class="c59">商户拓展迅速：</span><span class="c1">商户仍按照原有流程与收单方结算即可，无需为接入 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">付出额外的成本或承担币值风险；</span></li>
+   <li class="c18 c9"><span class="c59">避免资金丢失：</span><span class="c2 c1">基于智能合约构建的支付通道对资金目的地有严格限定，用户余额沉淀在通道内，即使受到攻击也无法被第三方窃取。</span></li>
+  </ul>
+  <p class="c18 c25 c29"><span class="c5">LITE</span><span class="c8">X </span><span class="c1">会成为未来数字世界的基础设施。虽然我们目前生活在法币本位的社会中，但是加密货币离我们并不遥远，已经有一些人开始接受加密货币作为设计、开发和咨询等劳务的报酬。随着以太坊（Ethereum）为代表的平台型生态不断发展，越来越多的价值会在链上产生，人们也逐渐愿意让自己部分的劳动以加密货币的方式获得回报。与投机者不同，这些「加密货币本位」的持币者比起承担手续费去交易所兑换法币再使用，会更倾向于通过 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">直接换取商品和服务。另一方面，当下仍有很多不发达地区的人民无法享受方便的金融服务，接受各国慈善捐款也十分困难，通过让当地的收单方、大型连锁商户加入支付生态，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">可以对这些地区的慈善事业产生很大的积极作用。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="2">
+   <li class="c51"><h2 id="h.mexs97rd72om" style="display:inline"><span class="c0">项目背景</span></h2></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c14"><h3 id="h.5lcuvcdk3l" style="display:inline"><span class="c38 c1">加密货币现状</span></h3></li>
+  </ol>
+  <p class="c18 c25 c29"><span class="c2 c1">据不完全统计，目前在各大交易所上市的加密货币已经超过1600种，而仅仅9年前，世界上第一种加密货币——比特币的概念才刚刚由中本聪提出。这些加密货币中有为了解决比特币的而出现的竞争币（如莱特币），也有基于区块链技术诞生的应用平台代币（如以太坊，以及基于以太坊开发的DApp生成的各种Token），还有基于侧链等新技术的币种。可以说，加密货币的繁荣很大程度上反映了技术界以及全社会对区块链技术的认可和期待。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">然而，加密货币目前的应用场景却十分有限。由于种类繁多、币值不稳定，加密货币主要的交易都来自于币币交易以及法币兑换，相比流通货币而言，现在的加密货币更像是一种投资标的。毫无疑问，火热的投资市场让区块链技术为大众所熟知，这是有利于加密货币发展的，但这不会是未来的发展方向。加密货币终究要回归流通货币的本质，只有人们开始使用加密货币消费、商家使用加密货币结算，整个社会慢慢迁移到加密货币的流通体系上来，才能实现加密货币的最大价值。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">加密货币的应用场景受到限制固然有社会各界认知不全面、传统利益集团阻碍等外部因素，但也有加密货币技术不完善、社区技术方案分歧较大等内部因素。而作为全球加密货币基石的比特币，也因其设计容量不足、处理速度慢、匿名性日渐降低等问题，基本无法作为流通货币使用，与大众的日常生活更是几乎没有关联。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="2">
+   <li class="c14 c25"><h3 id="h.fbva4igam70l" style="display:inline"><span class="c38 c1">小微支付难题——以比特币为例</span></h3></li>
+  </ol>
+  <p class="c18 c25 c29"><span class="c2 c1">一种合格的流通货币应该具备小额、即时支付能力，相比现金，数字货币在这方面有先天的优势。然而在主网（mainnet）已经成功运行了9年的今天，主流加密货币却逐渐丧失了迅速处理小额支付的能力，变成了一种价值符号和大额资产转移的通道，一如当年的黄金。小微支付之所以会成为比特币的一大难题，是因为为了确保分布式记账系统的一致性和稳定性，比特币在架构设计上对效率做出了牺牲。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">比特币设计之初，为了确保交易的不可撤销性、提升恶意结点的攻击成本，引入了一种分布式记账系统。它将数据封装打包后用链表结构承载，并通过一种叫做「工作量证明」（Proof of Work, PoW）的机制保障全网的计算结点都自发一致地维护唯一的账目记录。而对于链条上每一个称作「区块」（Block）的数据包，引入了非对称加密算法，确保其中记录的每一笔交易都不可更改。这就是我们今天熟知的「区块链」（Blockchain）技术。</span></p>
+  <p class="c18 c25 c29"><span class="c1">区块链技术现在已经成为各大巨头公司乃至各国政府都积极研究发展的前沿技术，价值潜力巨大，而比特币由于其货币属性，对自身区块链的能力进行了比较大的限制。一方面，</span><span class="c1">为了</span><span class="c1">保障系统的安全稳定和存储效率，比特币的区块大小被限制在1MB以内；另一方面，为了平衡矿工的收益，系统设计了一种动态难度机制，将系统的区块产出速度稳定在约10分钟/个；而每笔交易的平均大小为226B。这些因素导致了比特币网络处理交易的速度是大致不变的，约为</span><span class="c19">7笔/秒</span><span class="c1">，而实际的交易大小往往能够达到500B，这时候系统处理能力下降为3笔/秒。随着比特币交易量的不断增长，比特币主网拥堵的情况也日益严重，下图为撰文时（2018年01月16日）从</span><span class="c1 c60 c71">blockchain.info</span><span class="c1">截取的实时数据：</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 602.00px; height: 266.67px;"><img alt="" src="images/image6.png" style="width: 602.00px; height: 266.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c18 c25"><span class="c2 c1">可以看出全网平均每秒产生的交易笔数高达81.47笔，是处理速度的11倍多，而等待确认的交易数量超过了18万笔！即使立即停止所有交易，系统也需要6个小时以上才能处理完这些交易，可见比特币主网已经异常拥堵。</span></p>
+  <p class="c18 c25 c29"><span class="c1">比特币主网的拥堵进一步加剧了小额支付到账延迟的情况。由于比特币转账手续费是固额收取而非按比例收取，小额支付者愿意付出的手续费无法跟大额支付者抗衡，而矿工会优先记录手续费高的交易以获取更高的收益，因此小额支付的记账优先级总是低于大额支付。</span><span class="c1">事实上，目前一部分小额支付可能需要第二天才能到账</span><span class="c2 c1">。也就是说，如果你去星巴克买一杯拿铁，并直接使用比特币支付，那么运气不好的话，很可能坐到咖啡店关门的时候你还没喝到那杯拿铁。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">另外，比特币系统还对过小的支付金额做了限制。因为主网的不堪重负，比特币核心团队在2013年提交了一个功能来禁止一定金额以下的比特币交易，这被称为「除尘补丁」。目前这个灰尘阈值（dust threshold）是546聪（5.46μBTC），对应币值峰值时约为14美分，而低于这个阈值的转账将会被直接丢弃（官方原文：won't be relayed, won't be mined）。鉴于全世界不同地区的物价水平不同，低于14美分的交易在实际生活中并不少见，而这些交易在比特币系统中属于不被支持的「不经济交易」（uneconomic dust）。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">除了延迟到账问题，高昂的手续费也使得小额交易失去了意义。去年12月比特币的交易手续费一度达到1000聪/字节，按照226字节的交易大小和1 BTC≈15000 USD的时价来计算，一笔交易所需的手续费已经高达30美元，这不是一笔小额消费能够承受的手续费金额。</span></p>
+  <p class="c18 c25 c29"><span class="c2 c1">我们可以得出结论，比特币网络在处理小微支付时无法满足其小金额、低延迟、低手续费的固有要求，甚至可能把较小的支付金额直接过滤掉，这导致比特币无法将应用场景拓展到日常生活消费中来，极大的限制了加密货币的发展。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="3">
+   <li class="c14"><h3 id="h.tjvyv4c6gln2" style="display:inline"><span class="c38 c1">比特币的曙光——闪电网络（Lightning Network）</span></h3></li>
+  </ol>
+  <p class="c18 c25 c29"><span class="c2 c1">从2015年比特币维护者加文.安德烈森（Gavin Andresen）指出主网扩容的迫切性以来，比特币核心团队和整个社区都在争论什么方案才是比特币的未来。其中一派的主要意见为直接扩大区块的容量（2MB、8MB甚至不设上限），而这将不可避免地导致比特币硬分叉，进而严重影响当前格局的稳定性；另一派主张保留1MB的区块大小，通过链外的方式更长久地解决容量和延展性问题，而且这种方式有可能通过软分叉就能解决。经过激烈的博弈，原定于2017年11月（区块高度494,784）的SegWit2x硬分叉计划终止，而3个月前成功激活的隔离见证作为软分叉解决方案被固定了下来，比特币最终选择了一条平稳而长远的道路。</span></p>
+  <p class="c18 c25 c29"><span class="c19">隔离见证</span><span class="c1">（</span><span class="c19">SegWit</span><span class="c2 c1">）的原理是将区块中用于验证交易的见证信息（占交易容量的40%左右）在区块中的存储方式进行了调整，使得结点验证区块大小时不计算这部分内容，从而使得在逻辑上保持1MB容量限制的同时，达到在实际上增加区块空间到约2MB的效果。隔离见证的另一个重要意义是解决了「交易延展性」（Transaction Malleability）问题，即一笔交易的ID（TxID）有可能在最终确认前被第三方改变的问题。交易延展性虽然不会造成系统性的恶果，但是它的解决为比特币最受期待的升级方案铺平了道路——闪电网络。</span></p>
+  <p class="c18 c25 c29"><span class="c19">闪电网络</span><span class="c1">（</span><span class="c19">Lightning Network</span><span class="c1">）可以说是万众期待的比特币网络「第二层」升级，是比特币网络的升维操作。它的基本逻辑由两个智能合约（</span><span class="c19">RSMC</span><span class="c1">和</span><span class="c19">HTLC</span><span class="c2 c1">）构成，在保证链上支付一样的安全性的同时，巧妙地实现了比特币支付的链外运行。闪电网络在解决比特币困境上具有以下优点：</span></p>
+  <ul class="c13 lst-kix_man62uo2c0sx-0 start">
+   <li class="c18 c9"><span class="c19">资金安全</span><span class="c2 c1">：用户可随时关闭交易通道并申请提现，这一过程由智能合约保证；</span></li>
+   <li class="c18 c9"><span class="c19">快速交易</span><span class="c2 c1">：交易双方只需在打开通道和关闭通道时各提交一笔主网交易，期间双方在通道中的所有交易在链外进行，每一笔交易无论金额大小都能在毫秒级时间完成，系统处理速度可达每秒几百万笔；</span></li>
+   <li class="c18 c9"><span class="c19">低手续费</span><span class="c2 c1">：主网依赖专业矿工组织通过大规模计算进行交易维护，而闪电网络中的每个结点都可以作为交易传递链路，这种传递是全自动、极低成本的，因此只需非常少量的手续费，交易就能急速地在闪电网络中传递。</span></li>
+   <li class="c18 c9"><span class="c19">隐私保护</span><span class="c2 c1">：由于通道内的交易不会记录到主网，而传导链路上的每个结点只能获知它的上下游结点信息和金额信息，无法掌握交易全貌（如发起人、支付人、交易总金额），这使得交易双方的隐私得到了极大的保障。</span></li>
+  </ul>
+  <p class="c18 c25 c29"><span class="c2 c1">另一方面，闪电网络目前还停留在方案实现阶段，距离闪大规模部署和使用还有一段距离。结合小微支付场景来看，目前闪电网络还存在如下课题：</span></p>
+  <ul class="c13 lst-kix_i0ws14r8tfde-0 start">
+   <li class="c18 c9"><span class="c19">跨链通道</span><span class="c2 c1">：需要更多的主链对闪电网络加入支持；</span></li>
+   <li class="c18 c9"><span class="c19">智能路由</span><span class="c2 c1">：支付通道的限额由通道链路上最小的一环决定，每笔交易都需要寻找一条限额高于自身金额的通路才能到达收款方；</span></li>
+   <li class="c18 c9"><span class="c19">完全匿名</span><span class="c2 c1">：需要借助额外的加密协议来实现；</span></li>
+   <li class="c18 c9"><span class="c19">轻结点</span><span class="c1 c2">：闪电网络设计中要求每一个结点都运行一个比特币网络全结点，这无疑极大的限制了闪电网络的应用场景，需要设计一种可以运行在移动设备上的轻结点才能适应日常支付场景的要求。</span></li>
+   <li class="c18 c9"><span class="c19">中心化倾向</span><span class="c1">：由于闪电网络支付通道的开启和关闭都要消耗一定手续费，而通道容量有大小，因此有出现中心化大结点的风险。可以通过对协议进行自定义实现来加入一些反馈调节等机制，从而依靠自适应算法维持一个健康的拓扑结构和去中心化的网络。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;就使用了双层网络的结构实现了复杂路由和网络健康程度的自我调节，从而最大限度地避免中心化风险。</span></li>
+  </ul>
+  <p class="c15"><span class="c2 c1">闪电网络是目前最有前景的升级方案，已经有一些科技公司投入到了闪电网络基础技术和应用场景的探索中。随着半个多月前Blockstream宣布闪电网络RC1在主网测试成功，我们可以预见更多的团队将会加入到完善加密货币生态的行列中来。</span></p>
+  <p class="c18 c25 c32"><span class="c2 c1"></span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="3">
+   <li class="c51"><h2 id="h.4iw42j5a3www" style="display:inline"><span class="c0">关键问题：如何落地</span></h2></li>
+  </ol>
+  <p class="c15"><span class="c2 c1">在相当长一段时间内，商户都很直接难接受加密货币支付：一方面这需要非常深的知识积累，大多数商户没能力也没动力去学习；另一方面加密货币币值波动非常大，收来的款项无法纳入商户的成本收益模型中。因此在支付方案中，如何实时将加密货币转为法币与商户结算是一个非常关键的问题。</span></p>
+  <p class="c15"><span class="c2 c1">首先是加密货币兑换。目前加密货币到法币的兑换主要是由交易所完成的，但是交易所是一个完全中心化的机构，资金被盗风险、交易时效性差都制约了将直接对接交易所API作为支付方案一环的可行性。一些解决方案采用了对接交易所的同时自建资金池的方式进行优化，但这也带来了新的问题，比如资金池的容量问题和币值波动风险问题等。只有高效、安全地将加密货币兑换成法币，才能满足消费级支付场景的需要。</span></p>
+  <p class="c15"><span class="c2 c1">另一方面，也是最重要的一环：将法币结算给商户。虽然这件事情每天都在发生，但实际上一笔法币的结算需要很多支付机构之间互相协调配合，这其中商户承担了全部的费用（国际上平均手续费为交易金额的2%~3%）。下图简要描述了各机构的协作过程：</span></p>
+  <p class="c67 c25 c70"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 418.72px; height: 336.80px;"><img alt="" src="images/image3.jpg" style="width: 418.72px; height: 336.80px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c15"><span class="c1">在支付行业中，「收单行」其实代表了一个生态，主要由</span><span class="c19">收单银行</span><span class="c1">、</span><span class="c19">收单机构</span><span class="c1">、</span><span class="c19">服务商</span><span class="c2 c1">三者构成。收单银行就是指在商户那里放置POS机的银行；收单机构指持有第三方支付牌照的专业公司，如易宝支付、微信支付、支付宝等，他们直接跟银行合作，完成快捷支付等协议的对接以及风控等工作；服务提供商指协助收单方对商户提供软硬件系统的服务公司，如哆啦宝，主要涉及跟消费者和商户直接交互的软件系统，以及维护商户关系等。</span></p>
+  <p class="c15"><span class="c1">从上图可见最简单的方式是跟银行卡组织合作，毕竟卡组织耕耘多年，已经在全球建立了与很多发卡行、收单行的合作，但加密货币支付的无国界属性跟卡组织的主要收入——跨境结算业务在一定程度上有直接竞争关系，卡组织不可能止支持加密货币发展壮大。不久前，</span><span class="c19">Visa</span><span class="c1">和</span><span class="c19">MasterCard</span><span class="c2 c1">先后宣布停止旗下所有加密货币联名卡的功能，还分别发表言论抨击比特币，表示不会承认比特币的货币属性，也不提供比特币支付和兑换的服务。由于这些联名卡从几年前就开始提供，现有的大多数加密货币支付产品方案都采用了跟卡组织对接的方式完成支付落地，如今他们的联名卡都已无法继续使用。</span></p>
+  <p class="c15"><span class="c1">将支付落地方案完全依托于卡组织的解决方案是不稳定、不长久的，而且也是不可行的。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;团队具有深厚的支付行业背景，未来将深入全球支付行业生态，由团队推动世界各国当地收单机构加入生态，在更深层次上做到加密货币支付落地的安全稳定，从而可以跟各银行卡组织进行名正言顺地竞争，并在加密货币大流通时代到来之时将他们淘汰出局。</span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="4">
+   <li class="c51"><h2 id="h.btqg8xj31xv3" style="display:inline"><span class="c0">解决方案演变</span></h2></li>
+  </ol>
+  <p class="c15"><span class="c2 c1">为了提高消费者和商户对交易中使用加密货币的接受程度，一个合格的产品要能解决这些基本问题：</span></p>
+  <ul class="c13 lst-kix_uen8k52x2jy7-0 start">
+   <li class="c6 c9"><span class="c2 c1">支付到账慢</span></li>
+   <li class="c6 c9"><span class="c2 c1">支付手续费高</span></li>
+   <li class="c6 c9"><span class="c2 c1">商户接受度低</span></li>
+  </ul>
+  <p class="c18 c25"><span class="c1">应对前两个问题最好的方式是尽量避免在主链进行交易，但这也会带来一些安全问题；最后一个问题则相对简单，只要为商户承担加密货币到法币的兑换工作，实现向商户直接结算法币即可。然而在实现方式上能否延续加密货币的去中心化的理念在很大程度上决定了这种方案的生命力，因为只有去中心化的解决方案才能体现加密货币的核心价值，否则无法稳定长期运营。按照这个标准，我们把现有的解决方案划分为三个阶段，分别为：</span><span class="c19">中心化</span><span class="c1">、</span><span class="c19">半中心化</span><span class="c1">、</span><span class="c19">去中心化</span><span class="c1">，最后在加密货币实现完全流通后，讨论哪种方案更有生命力。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="4">
+   <li class="c61"><h3 id="h.6jwnhj13shbj" style="display:inline"><span class="c1">阶段一：中心化解决方案——代表产品</span><span class="c38 c19">BitPay</span></h3></li>
+  </ol>
+  <p class="c15"><span class="c19">BitPay</span><span class="c2 c1">是目前全球最大的加密货币（主要是比特币）支付解决方案提供商，被称为比特币界的PayPal。它通过向商户提供法币结算的方式，鼓励更多商户接入比特币支付方式。自2014年成立以来，BitPay已经在全球拥有了几万个合作商户。</span></p>
+  <p class="c67 c25 c70"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 551.42px; height: 210.50px;"><img alt="" src="images/image1.jpg" style="width: 590.95px; height: 210.50px; margin-left: -39.53px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c15"><span class="c1">BitPay通过把用户转账过来的比特币帮商户兑换成法币的方式提供服务，然而这种服务模式已经逐渐脱离时代：日趋高昂的手续费让原本就不太多的比特币支付者变得更加稀少，也迫使BitPay将商户的提现门槛提高到了100美元。另一方面，BitPay完全中心化的运作模式使得用户和商户的资金安全得不到保障：为了节省手续费，用户会倾向于每次向BitPay的钱包中转入较大金额的比特币，而商户端也有前述的提现门槛。如果BitPay因为遭遇攻击导致其官方账户中的比特币和现金受损，那么相应的用户和商户资金也就丢失了。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="5">
+   <li class="c61"><h3 id="h.dqvhv68yq6ke" style="display:inline"><span class="c1">阶段二：半中心化的解决方案——代表产品</span><span class="c38 c19">TenX</span></h3></li>
+  </ol>
+  <p class="c18 c25 c39"><span class="c2 c1">比特币社区对隔离见证达成共识后，闪电网络的前景也明朗起来，很多团队开始基于闪电网络构建解决方案。他们中的佼佼者——TenX在36小时内筹集到100,000枚ETH的成绩也侧面反映出了业界对这种解决方案寄予厚望。</span></p>
+  <p class="c67 c25 c69"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 645.30px; height: 175.58px;"><img alt="" src="images/image4.jpg" style="width: 645.30px; height: 175.58px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c18 c25 c39"><span class="c1">TenX的进步之处在于它通过闪电网络与用户进行加密货币转账，规避了加密货币存储在官方账户内的中心化风险，因为即使TenX受到攻击，用户依然可以利用RSMC智能合约将自己的资金提回主链钱包内，不用担心被攻击者转走。但是这在支付流程中只能算是完成了一半，因为还需要将加密货币兑换成法币向商户结算，TenX在这一步选择了与Visa合作发行联名信用卡的方式解决问题。然而Visa官方曾明确表示，</span><span class="c1">Visa并不涉及到将货币转换为法定货币的方式</span><span class="c2 c1">，这方面由发行人或其程序管理员通过一个加密的货币兑换来执行。也就是说Visa只是作为一个结算通道帮助TenX集成进商户的结算流程，其对加密货币消费的所谓支持也与用户使用信用卡积分进行消费非常类似，并不涉及加密货币兑换法币的业务，可见这一步骤只能由TenX借助交易所等方式中心化地完成。</span></p>
+  <p class="c18 c25 c39"><span class="c1">另一方面，通过Visa等银行卡组织与商户结算相当于将自己核心商业模式的一半委托给合作方完成，而作为加密货币支付方式的TenX与代表传统货币支付网络的Visa在将来必然会发展为竞争关系，这是非常不稳定的。2018年的1月6日，Visa宣布与一家名为WaveCrest的借记卡供应商结束了合作，而正是这家公司发行了</span><span class="c19">TenX</span><span class="c1">、CryptoPay、Bitwala、Wirex等公司的加密货币联名卡，这导致了</span><span class="c1">TenX与Visa联合发行的银行卡已经无法使用</span><span class="c2 c1">。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="6">
+   <li class="c61"><h3 id="h.j8brtw613uol" style="display:inline"><span class="c1">阶段三：去中心化的解决方案——</span><span class="c5 c35">LITE</span><span class="c8 c35">X</span></h3></li>
+  </ol>
+  <p class="c18 c25 c39"><span class="c1">无论BitPay还是TenX，都存在对Visa等卡组织的依赖和中心化的加密货币到法币的兑换方案，这些给他们的商业模式带来了隐患和打击。只有探索出一种完全去中心化的支付路径，才有可能长久地解决加密货币的支付问题，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">正是这样一种解决方案。</span></p>
+  <p class="c67 c25 c69"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 665.35px; height: 184.50px;"><img alt="" src="images/image8.png" style="width: 665.35px; height: 193.72px; margin-left: 0.00px; margin-top: -4.61px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c18 c25 c39"><span class="c5">LITE</span><span class="c8">X </span><span class="c1">的架构中不存在任何中心化的结点，无论是加密货币的传递还是法币的结算都是由网络上的用户结点自主协调完成的，这是 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">网络结点通过复杂的匹配模型和路由算法实现的。在这一过程中，消费者成功用加密货币完成了即时支付，即使支付金额非常小也不会受影响；商户实时地收到了对应金额的法币，免受提现门槛的困扰；购币者也低成本地换到了需要的加密货币，可以用于接下来的消费或任何目的。</span></p>
+  <p class="c18 c25 c39"><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">不但低成本、高效率地解决了加密货币在支付场景中遇到的问题，还能最大限度地保障用户和商户的资金安全。在上述交易过程中，如果交易环节中有结点出现问题，交易都可以自动切换到其他路径继续进行；即使大部分结点瘫痪导致交易无法进行，用户的资金也会按照RSMC的约定自动提现到主链账户或退回法币账户，不会被窃取或丢失。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="7">
+   <li class="c61"><h3 id="h.ol7zcv4ynv27" style="display:inline"><span class="c38 c1">最终阶段：用加密货币完成交易闭环</span></h3></li>
+  </ol>
+  <p class="c18 c25 c39"><span class="c2 c1">用户使用加密货币支付，商户使用加密货币结算，法币与加密货币互换的需求大幅减少甚至消失，这是我们期望看到的加密货币本位的新业态。</span></p>
+  <p class="c67 c25 c81"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 535.00px; height: 170.00px;"><img alt="" src="images/image10.png" style="width: 535.00px; height: 183.18px; margin-left: 0.00px; margin-top: -6.59px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c18 c25 c39"><span class="c5">LITE</span><span class="c8">X </span><span class="c1">在这一过程中会发挥非常大的促进作用，但这并不意味着</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">的价值仅存在于过渡阶段，即使在完全加密货币化的交易场景中，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">已经建立起的大规模、多联通的闪电网络结构仍然是效率最高、成本最低的支付通路，这一先发优势建立的壁垒将具有非常大的粘性，让 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">成为用户支付的首选。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="5">
+   <li class="c51"><h2 id="h.1nideq56iaqq" style="display:inline"><span class="c1">去中心化的支付解决方案——</span><span class="c5">LITE</span><span class="c8">X</span></h2></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c61"><h3 id="h.au8n9phfam30" style="display:inline"><span class="c1 c38">概念定义</span></h3></li>
+  </ol>
+  <ul class="c13 lst-kix_ws7qz2nxg4xj-0 start">
+   <li class="c18 c24"><span class="c8">LTXN</span><span class="c5">（LITEX</span><span class="c19">&nbsp;</span><span class="c5">Network）</span><span class="c1">：</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">支付</span><span class="c1">生态的基础</span><span class="c1">网络。以BOLT协议为基础进行定制和改进，</span><span class="c5">LTXN</span><span class="c2 c1">能够让支付和购币交易自动匹配、智能路由，并通过一系列智能合约承载复杂的博弈策略，在抑制中心化结点出现的同时保持良好的连通度和响应速度，让网络拓扑结构均衡、高效。</span></li>
+   <li class="c18 c24"><span class="c59">消费者（Customer）</span><span class="c2 c1">：使用加密货币进行消费支付的用户；</span></li>
+   <li class="c18 c24"><span class="c46">购币者</span><span class="c2 c1">（Exchanger）：使用法币购买（兑换）加密货币的用户；</span></li>
+   <li class="c18 c24"><span class="c59">结点</span><span class="c1">（Node）：在</span><span class="c5">LTXN</span><span class="c2 c1">中提供联通性以获取手续费收益的专业个体；</span></li>
+   <li class="c18 c24"><span class="c46">收单方</span><span class="c2 c1">（Acquirer）：负责从购币者扣款并与商户法进行币结算的机构。</span></li>
+  </ul>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c61"><h3 id="h.mljajs10yx9u" style="display:inline"><span class="c38 c1">方案设计</span></h3></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-2 start" start="1">
+   <li class="c33"><h4 id="h.3ymva79d8awv" style="display:inline"><span class="c5 c35">LITE</span><span class="c8 c35">X</span><span class="c8 c35 c65">&nbsp;</span><span class="c53 c50 c1">架构</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 531.00px; height: 535.13px;"><img alt="" src="images/image5.png" style="width: 531.00px; height: 565.13px; margin-left: 0.00px; margin-top: -16.88px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></h4></li>
+  </ol>
+  <p class="c25 c32 c58"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15"><span class="c1">上图为</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">解决方案的总体架构图。实线箭头代表的是货币和产品等现实交易要素的流向，虚线代表的是</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">系统中的数据和控制信息的流向，其中的</span><span class="c19 c60">R</span><span class="c19">叫做原像，</span><span class="c2 c1">可以简单理解为一个暗语，拿到暗语的人可以向他的上游索取加密货币，这是HTLC智能合约中用以保障整个链条自动进行交易传递的机制。</span></p>
+  <p class="c15"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">生态的运转主要由两个流程驱动，主流程是消费者使用加密货币消费的过程，基本按照上图中逆时针方向运行；副流程是购币者将法币换成加密货币的过程，基本按照上图中顺时针方向运行。两个流程通过</span><span class="c5">LTXN</span><span class="c2 c1">的协调得到优化的配置和联动，共同完成多种支付场景和兑换场景的需求。</span></p>
+  <p class="c15"><span class="c1">在主流程中，收单方（Acquirer）在商户（Merchant）处提前布置好了收款信息，比如一个收款二维码（或者兼容Apple Pay的NFC收款装置等），消费者（Customer）通过</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">兼容的钱包App发起一笔支付请求（PayRequest），这一请求被广播到</span><span class="c5">LTXN</span><span class="c1">上，通过匹配得到一个支付路由（Route），这一路由将消费者的付款请求发送给匹配程度最高的购币者，然后进入副流程，由购币者（Exchanger）用法币通过收单方扣款支付给商户，收单方确认扣款后会发送</span><span class="c19 c60">R</span><span class="c1">给购币者，购币者将</span><span class="c19 c60">R</span><span class="c1">发送回</span><span class="c5">LTXN</span><span class="c1">后就能立即获得对应金额的加密货币，最后</span><span class="c19 c60">R</span><span class="c1">经</span><span class="c5">LTXN</span><span class="c1">反馈给消费者，消费者验证</span><span class="c19 c60">R</span><span class="c1">与后将加密货币支付给</span><span class="c5">LTXN</span><span class="c2 c1">中对应的下游结点，整个交易过程结束。</span></p>
+  <p class="c15"><span class="c2 c1">系统设计中满足各需求的优先级如下：</span></p>
+  <ul class="c13 lst-kix_14hku9ur9j05-0 start">
+   <li class="c18 c9"><span class="c2 c7">资金安全</span></li>
+  </ul>
+  <p class="c15"><span class="c1">确保交易资金安全是链外交易的前提，只有通过技术方案规避中心化的信任风险才是一个合格的链外交易解决方案。</span><span class="c5">LTXN</span><span class="c1">基于闪电网络技术，可以通过RSMC和HTLC两种智能合约确保资金安全。如果</span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">结点受到攻击导致网络无法连通，在一定时间后用户的加密货币资产也会被智能合约自动提交到主链提现，安全地回到用户的数字钱包里。</span></p>
+  <ul class="c13 lst-kix_14hku9ur9j05-0">
+   <li class="c18 c9"><span class="c2 c7">支付和收款体验</span></li>
+  </ul>
+  <p class="c15"><span class="c1">小额及时支付场景要求消费者能够快速、顺畅地完成支付，而商户可以方便地确认收款情况。由于加密货币价值的波动性，如果使用加密货币进行标价，消费者和商户都会陷入商品价格时刻变化的灾难中。</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">的客户端支持输入以法币为单位的价格，在匹配引擎的辅助下确定对应的加密货币价格，消费者只需了解自己通过加密货币支付了特定法币价格的的金额即可；在商户端，商户可以选择法币实时入账，因此使用体验与其他支付网关（如Visa）并无区别，甚至在到账时间上更有优势。</span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <ul class="c13 lst-kix_14hku9ur9j05-0">
+   <li class="c18 c9"><span class="c2 c7">兑换效率</span></li>
+  </ul>
+  <p class="c15"><span class="c2 c1">系统可以对不同的兑换需求提供相应的产品方案，而具体选用哪种方案由购币者自由选择。如果购币者有稳定的兑币需求，对时效性要求不高（如可以延迟一天甚至一周到账，并可以承受币值波动带来的风险），系统可以以比较低的手续费满足这一需求；如果购币者有非常迫切地的兑币需求，系统也可以通过匹配引擎最快速度地为其匹配相应的订单，而此时购币者可能需要付出稍高的手续费。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="2">
+   <li class="c66"><h4 id="h.5kpbsck15ny5" style="display:inline"><span class="c5">LTXN</span><span class="c53 c50 c1">概述</span></h4></li>
+  </ol>
+  <p class="c25 c67"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 577.06px; height: 348.00px;"><img alt="" src="images/image2.png" style="width: 577.06px; height: 348.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c18 c25 c48"><span class="c1">上图展示了</span><span class="c5">LTXN</span><span class="c2 c1">中一笔支付交易与购币交易匹配后的路由情况。</span></p>
+  <p class="c18 c25 c48"><span class="c1">在经典闪电网络中，每一个闪电网络结点都默认维护了一个对应加密货币的全结点，根据HTLC的设计，当一笔交易通过时，支付通道中的所有结点必须主动对该交易的传递进行签名。但是在实际应用中，普通用户既不可能为了小额支付而维护一个全结点，也没有精力对每一笔经过自己通道的交易进行手动签名。一种更现实的情景是，用户通过 智能手机等移动终端（无法承载全结点）对自己的支付进行签名，而在发起下一笔交易之前不会再连接支付网络。因此，依赖普通用户进行交易传递是不现实的，</span><span class="c5">LTXN</span><span class="c2 c1">设计了类似各公链中矿工这种类型的专业用户——Node来提供交易传递的服务。</span></p>
+  <p class="c18 c25 c48"><span class="c1">比特币矿工通过记录交易来赚取挖矿奖励和转账手续费收益，类似的，</span><span class="c5">LTXN</span><span class="c2 c1">中的Node通过维护全结点、建立交易通道、全自动签名、保障在线率等服务赚取支付和兑换手续费，并由价格预言机确保手续费比当地交易所更低。为了确保Node提供服务的稳定性以及抑制中心化倾向，Node需要向智能合约质押一定量的Token（Token相关设计在后文详述）来获得相应金额的交易传递权，在传递交易的过程中这些Token会不断被消耗，然后由智能合约自动分配给消费者、兑换者等生态各方。由于Node质押的Token数量不同，其传递交易的能力也就不同，上图中红色的Node就因为达到传递金额上限而无法承载本次交易，被路由绕过。</span></p>
+  <p class="c18 c25 c48"><span class="c2 c1">根据RSMC的设计，Node之间的支付通道有大小之分，在图中表现为双线间距不同。如果一笔交易数额超过了当前通道能够传递的上限，路由也会放弃这条通路，图中红色双线就表示当前交易由于金额过大而无法通过的通道。</span></p>
+  <p class="c18 c25 c48"><span class="c1">为了在效率、稳定、成本、拓扑等多个方面进行平衡，</span><span class="c5">LTXN中</span><span class="c2 c1">还有很多具体的机制设计，包括质押体系和博弈策略等，甚至有需要对BOLT协议底层进行定制优化。限于篇幅，过于深度的技术方案会在后续的黄皮书中专门介绍。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="2">
+   <li class="c14"><h3 id="h.45p567ou3iyf" style="display:inline"><span class="c1">技术创新</span></h3></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-2 start" start="1">
+   <li class="c33"><h4 id="h.6r3ifb39vntm" style="display:inline"><span class="c50 c1 c53">复合决策闪电网络模型</span></h4></li>
+  </ol>
+  <p class="c67 c25 c88"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 655.56px; height: 254.50px;"><img alt="" src="images/image9.jpg" style="width: 655.56px; height: 254.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></p>
+  <p class="c15 c64"><span class="c1">闪电网络是基于BOLT协议实现的分布式网络的统称，经典闪电网络设计只能实现加密货币的链外点对点交易，一旦涉及到法币交易的匹配就无能为力。</span><span class="c5">LTXN</span><span class="c1">抽象出的</span><span class="c1">复合决策闪电网络</span><span class="c2 c1">通过将一个决策层网络和一个执行层网络融合到同一套分布式系统中，共用结点的同时可以做到深度联动，让闪电网络更智能，从而实现兑换请求与支付请求的匹配等高级路由功能，还可以通过规则设计让网络拓扑保持健康高效，避免出现中心化结点。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="2">
+   <li class="c33"><h4 id="h.i51wy9c9nqgt" style="display:inline"><span class="c1">匹配引擎</span></h4></li>
+  </ol>
+  <p class="c15"><span class="c1">匹配引擎是一系列分布式智能算法集合，是</span><span class="c5">LTXN</span><span class="c2 c1">最复杂的核心逻辑。以下的描述大都基于系统中最简单的业务类别进行举例，不涉及具体的数据结构，也不讨论核心策略集——「非银行卡支付」业务逻辑如何应用于复杂业务处理和提升系统稳定性等细节。</span></p>
+  <p class="c15"><span class="c5">LTXN</span><span class="c1">系统中同时存在很多支付请求和兑换请求，其中支付请求一般有金额相对较小、即时性要求非常高的特点，兑换请求则视情况而定：有些用户为了获得较低的兑换成本，可以承受即时性比较低的兑换过程，甚至可以只设定一个上限，而在兑换的过程中按照需求随时结束兑换；另一些用户为了马上获得加密货币，可以选择支付较高的兑换手续费从而能够在很短的时间内兑换完成。实际设计中，用户需求的</span><span class="c19">时效/成本</span><span class="c1">比值</span><span class="c2 c1">可能介于前述两种情况之间的任意位置，我们将其用一定方式量化以作为入结点的自适应匹配决策的参考数据。</span></p>
+  <p class="c15"><span class="c1">除了时效/成本的匹配，两方金额的匹配也是非常重要的一环。常见的情况是兑换请求的金额大于支付请求，</span><span class="c5">LTXN</span><span class="c1">各结点需要在全网匹配出复数个满足要求的请求组成</span><span class="c1">最</span><span class="c2 c1">优解，需要考量的因素包括但不限于币种、金额、通道时间成本、通道传递损耗等。如果支付请求大于兑换请求，这种情况下支付额度较大，此时需要权衡的除了上述因素外，还应将主链通道的时效性和成本综合考虑，如果金额过大则建议用户进行主网支付。</span></p>
+  <p class="c15"><span class="c1">最后，匹配策略同样需要考量联通性成本，如果收付两方位于互不联通的两个网络中，还需要考虑建立网间通道的成本，这些放在下面的路由部分进行讨论。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="3">
+   <li class="c33"><h4 id="h.mrigmma78ulb" style="display:inline"><span class="c1">智能路由</span></h4></li>
+  </ol>
+  <p class="c15"><span class="c1">闪电网络通道的建立和关闭都需要进行链上交易，会产生比较高的时间和金钱成本，因此多数情况下消费者与购币者之间不存在直接通道，而是根据HTLC合约通过中间结点进行交易传导。中间结点可能是单个结点，也可能是首尾直连的多个结点。为了能够迅速的找到最短（或者代价最低）的路径，</span><span class="c5">LTXN</span><span class="c2 c1">各结点都有一套自主协商算法和结点信息缓存同步策略，以便在需求出现时以最快速度找到通路，完成交易。</span></p>
+  <p class="c15"><span class="c2 c1">闪电网络的提现操作需要关闭支付通道，这使得全网的拓扑结构时刻处于变化状态： 一方面，随时都可能有旧的通道被关闭，新的通道被打开，原本合法的通路可能因为没有及时通过而关闭，这时候就需要立即寻找新的通路；另一方面，由于每笔支付需求不同，各结点间的通道容量（可以理解为通道的直径）也会不同，除了在最初路由时将通道容量考虑在内之外，路由过程中有可能需要实时对支付进行拆分、合并操作，这些超越传统路由算法问题模型的业务逻辑需要更加细致的策略实现。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="4">
+   <li class="c33"><h4 id="h.gxutnfu7pctq" style="display:inline"><span class="c1">轻结点</span></h4></li>
+  </ol>
+  <p class="c15"><span class="c1">按照BOLT协议，闪电网络的结点被设计为一个完整的比特币网络结点，这意味着加入网络的用户必须维护一个体积达几十GB的完整数据备份，这在实际使用中是不现实的。我们基于简易支付验证（Simplified Payment Verification，SPV）来设计</span><span class="c5">LTXN</span><span class="c1">的结点，并在此基础上添加了一些业务需要的数据记录，这样</span><span class="c5">LTXN</span><span class="c1">的结点不需要维护一个完整结点，也不需要存储整个网络中的全部用户交易，只需要存储与该结点建立通道的用户的相关交易即可。一旦通道关闭，交易在区块链主链得到确认，通道两端结点的余额就会写回主链，此时用户可以选择删除之前的交易数据来优化存储空间。优化后的</span><span class="c5">LTXN</span><span class="c2 c1">结点不会占用太多的存储空间，一般的智能手机完全可以支持。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="5">
+   <li class="c18 c25 c84"><span class="c53 c50 c1">其他</span></li>
+  </ol>
+  <p class="c18 c25 c34"><span class="c1 c50">为了实现</span><span class="c5">LTXN</span><span class="c50 c1">的设计，满足小额即时支付的需求，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c50 c1">实验室还在继续深挖闪电网络拓扑设计，并通过改进BOLT协议来完成更高效的路由方案。目前</span><span class="c5">LITE</span><span class="c8">X</span><span class="c50 c1">实验室正在着手编写</span><span class="c5">LITE</span><span class="c8">X</span><span class="c50 c1">黄皮书（即技术白皮书），随着科研和开发的不断进行，我们的技术方案也会不断进步和完善，保障</span><span class="c5">LITE</span><span class="c8">X</span><span class="c53 c50 c1">生态的平稳快速发展。</span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c18 c25 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="6">
+   <li class="c51"><h2 id="h.n7andb49khaf" style="display:inline"><span class="c0">应用场景</span></h2></li>
+  </ol>
+  <p class="c15"><span class="c1">首先在不引入</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">的情况下，我们讨论加密货币的消费场景是怎样的：</span></p>
+  <p class="c15"><span class="c2 c1">假设Alice只持有比特币，并且想从咖啡店老板Bob这里买到一杯咖啡。如果Bob只是一个对技术不太了解、不追新潮的普通商人，那么他拥有一个比特币钱包的概率几乎为0，这意味着Alice必须先把比特币兑换成法币，然后才能支付给Bob。Alice可以登录到一个加密货币交易所出售她的比特币，而为了尽快获得法币（Bob可能已经开始磨咖啡豆了），她需要以比较低的价格挂出，并支付相对不算低的交易费用。由于交易额度较小，即使Alice成功售出了比特币，交易到账时间也有可能长达数小时，而这时候咖啡已经凉透了。</span></p>
+  <p class="c15"><span class="c2 c1">经过上次失败的交易后，Bob对比特币有了一定的了解，他欣赏比特币的理念，但同时又不想因为接受比特币支付而承担币值波动风险，于是他接入了一家比特币支付网关提供商，这样一来虽然接受的是比特币支付，但最终到账的是支付网关兑换后的法币，看上去正常多了。Alice为了方便支付，也已经向这家支付网关进行了预充值（主网交易，需要较高手续费和较长的时间），所以这次比特币支付体验不错，Alice很快拿到了刚做好的咖啡。Bob登录到网关后台，打算把刚刚这笔5美元的交易提现，结果发现由于比特币主网交易手续费过高，支付网关将提现门槛改成了100美元！无奈中Bob只能等Alice买够20杯咖啡后才能提现了，这要等上至少20天——如果Alice每天都来的话。就在第19天的时候，Bob发现这家支付网关由于受到黑客的攻击丢失了大量的比特币和现金，宣告破产（中心化风险），自己的未提现95美元也成为泡影，这时Alice也向Bob抱怨说自己还没消费完的比特币也一并在这次事件中被黑客转走。</span></p>
+  <p class="c15"><span class="c1">现在我们引入</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">，感受去中心化的支付网络带来的便捷与安全。</span></p>
+  <p class="c15"><span class="c1">Bob遭受了损失，但他并没有放弃比特币，于是他接入了新的技术解决方案</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">。接入过程与其他支付网关（如Visa等）并没有什么不同，十分顺利，于是Bob通知Alice他又可以接受比特币支付了。Alice为了避免上次遭受的中心化风险，也成为了</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">的用户，建立了属于自己的支付通道。于是她打开</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">的客户端扫描了Bob的收款二维码，并直接输入咖啡的法币金额5美元，点击支付——1秒钟后，Bob的收银台提示收到一笔5美元的支付，Bob点击确认收款，发现5美金直接打到了他的账户里；Alice的手机此时也提示支付完成，等值5美元的比特币已从通道余额中扣除，手续费为0。在</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">的帮助下，Alice非常便捷地使用比特币买到了一杯咖啡，并且没有付出任何手续费；Bob则实时地收到了比特币转换而来的法币，终于可以放心地继续接受比特币支付了。事实上，即使这时</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">收到攻击而损失部分结点，已经建立起的 </span><span class="c5">LTXN </span><span class="c1">仍能完成Alice的支付需求；即使多数结点被破坏而导致支付失败，Alice和Bob的既有资产也都不会遭受损失。</span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="7">
+   <li class="c51"><h2 id="h.8hi57ch5ixmn" style="display:inline"><span class="c0">代币系统设计</span></h2></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c14"><h3 id="h.nlmv8my2txws" style="display:inline"><span class="c38 c1">名称与设计目标</span></h3></li>
+  </ol>
+  <p class="c15"><span class="c1">作为一个多角色共建的生态系统，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">需要一系列激励规则来确保系统的健康运转和快速发展，并将生态产生的价值回馈给全体参与者。为此</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">设计了一种加密代币</span><span class="c5">LITE</span><span class="c8">X </span><span class="c19">&nbsp;</span><span class="c5">Token</span><span class="c1">（符号为</span><span class="c5">LXT</span><span class="c2 c1">）来承载这一功能。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="2">
+   <li class="c83 c78"><h3 id="h.1jvzkw6ukg7f" style="display:inline"><span class="c5">LXT</span><span class="c8">&nbsp;</span><span class="c38 c1">经济体系</span></h3></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-2 start" start="1">
+   <li class="c33"><h4 id="h.obhwm14fh7fu" style="display:inline"><span class="c53 c50 c1">产生和消灭</span></h4></li>
+  </ol>
+  <p class="c15"><span class="c5">LXT</span><span class="c1">&nbsp;目前基于以太坊智能合约 ERC20 标准生成，总数量为</span><span class="c19">20亿</span><span class="c1">（</span><span class="c19">2,000,000,000</span><span class="c1">）枚</span><span class="c19">，</span><span class="c1">由系统一次性配置完成，永不增发。</span><span class="c5">LXT</span><span class="c2 c1">没有消灭机制。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-2" start="2">
+   <li class="c33"><h4 id="h.rie8sf7o146f" style="display:inline"><span class="c53 c50 c1">供给和需求</span></h4></li>
+  </ol>
+  <ul class="c13 lst-kix_qd0j2biv3dtj-0 start">
+   <li class="c18 c9"><span class="c59">供给：</span><span class="c1">根据交易金额按一定比例掉落</span><span class="c5">LXT</span><span class="c2 c1">给消费者、兑换者等生态各方；</span></li>
+   <li class="c18 c9"><span class="c46">需求</span><span class="c2 c1">：</span></li>
+  </ul>
+  <ul class="c13 lst-kix_qd0j2biv3dtj-1 start">
+   <li class="c18 c24"><span class="c1">结点：通过向系统质押</span><span class="c5">LXT</span><span class="c1">来获得对应体量的经营权，并且不断补充在经营过程中对</span><span class="c5">LXT</span><span class="c2 c1">的消耗，消耗部分作为供给来源；</span></li>
+   <li class="c18 c24"><span class="c1">用户：使用</span><span class="c5">LXT</span><span class="c2 c1">支付可以获得价格优惠（手续费优惠、减免等）。</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 577.06px; height: 213.33px;"><img alt="" src="images/image7.png" style="width: 577.06px; height: 213.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" /></span></li>
+  </ul>
+  <p class="c18 c25 c48"><span class="c1">上图近似描述</span><span class="c5">LXT</span><span class="c1">在生态中的流向，数据仅为描述用，不代表实际数值。实际设计中的根据不同国家和地区的政策、税法等因素以及价格预言机提供的参数，手续费的比例、</span><span class="c5">LXT</span><span class="c1">消耗和掉落的比例都会有所差异。另外作为ERC20 Token，</span><span class="c5">LXT</span><span class="c1">在生态分配势必产生成本，作为有正向收益的系统，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">完全可以承担这一成本，并通过合理的机制设计进一步降低成本。</span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="3">
+   <li class="c14 c25"><h3 id="h.n9i6ardetds9" style="display:inline"><span class="c5 c35">LXT</span><span class="c38 c1">发行计划</span></h3></li>
+  </ol>
+  <a id="t.10e697f312d16ca7fcfb58253a22482c9ff094c6"></a>
+  <a id="t.0"></a>
+  <table class="c57">
+   <tbody>
+    <tr class="c31">
+     <td class="c21 c37" colspan="1" rowspan="1"><p class="c79"><span class="c2 c19">数量</span></p></td>
+     <td class="c12 c37" colspan="1" rowspan="1"><p class="c79"><span class="c2 c19">比例</span></p></td>
+     <td class="c40 c37" colspan="1" rowspan="1"><p class="c79"><span class="c2 c19">用途</span></p></td>
+     <td class="c37 c43" colspan="1" rowspan="1"><p class="c79"><span class="c2 c19">说明</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c21" colspan="1" rowspan="1"><p class="c56"><span class="c2 c1">100,000,000</span></p></td>
+     <td class="c12" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">5%</span></p></td>
+     <td class="c40" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">早期投资人</span></p></td>
+     <td class="c43" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">面向早期的基石投资人、顾问等。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c21" colspan="1" rowspan="1"><p class="c56"><span class="c2 c1">700,000,000</span></p></td>
+     <td class="c12" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">35%</span></p></td>
+     <td class="c40" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">预售</span></p></td>
+     <td class="c43" colspan="1" rowspan="1"><p class="c6"><span class="c1">面向机构投资者等，用于 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;项目后续开发、人才招募、市场推广等。</span></p><p class="c6"><span class="c2 c1">此部分资金的使用需要定期公示。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c21" colspan="1" rowspan="1"><p class="c56"><span class="c2 c1">300,000,000</span></p></td>
+     <td class="c12" colspan="1" rowspan="1"><p class="c6"><span class="c1">15</span><span class="c2 c1">%</span></p></td>
+     <td class="c40" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">生态建设</span></p></td>
+     <td class="c43" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">用于空投、Node激励等生态启动需求。</span></p></td>
+    </tr>
+    <tr class="c55">
+     <td class="c21" colspan="1" rowspan="1"><p class="c56"><span class="c2 c1">600,000,000</span></p></td>
+     <td class="c12" colspan="1" rowspan="1"><p class="c6"><span class="c1">3</span><span class="c2 c1">0%</span></p></td>
+     <td class="c40" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">发展基金</span></p></td>
+     <td class="c43" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">用于发展合作伙伴、团队建设等。</span></p><p class="c6"><span class="c2 c1">此部分资金的使用需要基金会决议，并提前公示。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c21" colspan="1" rowspan="1"><p class="c56"><span class="c2 c1">300,000,000</span></p></td>
+     <td class="c12" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">15%</span></p></td>
+     <td class="c40" colspan="1" rowspan="1"><p class="c6"><span class="c2 c1">创始团队</span></p></td>
+     <td class="c43" colspan="1" rowspan="1"><p class="c6"><span class="c1">回报创始团队在加密货币领域的探索和开发以及今后维护 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;等产品技术和运营发展作出的努力。</span></p><p class="c6"><span class="c2 c1">代币发行时此部分将被智能合约锁定，1个月后解锁，每月解锁此部分的1/36，分36个月解锁完成。</span></p></td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="c18 c25 c32"><span class="c2 c1"></span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c18 c25 c32 c81"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="8">
+   <li class="c51"><h2 id="h.lnlrnqw8greb" style="display:inline"><span class="c0">项目规划</span></h2></li>
+  </ol>
+  <a id="t.9f7140f4f3eb982a92f12f040645d6085730f069"></a>
+  <a id="t.1"></a>
+  <table class="c57">
+   <tbody>
+    <tr class="c52">
+     <td class="c41 c37" colspan="1" rowspan="1"><p class="c17"><span class="c2 c19">步骤</span></p></td>
+     <td class="c16 c37" colspan="1" rowspan="1"><p class="c17"><span class="c2 c19">时间</span></p></td>
+     <td class="c42 c37" colspan="1" rowspan="1"><p class="c17"><span class="c2 c19">计划</span></p></td>
+    </tr>
+    <tr class="c47">
+     <td class="c41" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">第一阶段</span></p></td>
+     <td class="c16" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">2017Q4-2018Q1</span></p></td>
+     <td class="c42" colspan="1" rowspan="1"><p class="c6 c36"><span class="c2 c1">系统架构设计；</span></p><p class="c6 c36"><span class="c2 c1">BOLT协议基础功能实现与测试；</span></p><p class="c6 c36"><span class="c2 c1">收单方接洽。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c41" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">第二阶段</span></p></td>
+     <td class="c16" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">2018Q2-2018Q4</span></p></td>
+     <td class="c42" colspan="1" rowspan="1"><p class="c6 c36"><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;官方APP研发；</span></p><p class="c6 c36"><span class="c5">LTXN</span><span class="c2 c1">&nbsp;架构完成并完成理论验证；</span></p><p class="c6 c36"><span class="c2 c1">收单方、服务商接入测试。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c41" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">第三阶段</span></p></td>
+     <td class="c16" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">2019Q1-2019Q3</span></p></td>
+     <td class="c42" colspan="1" rowspan="1"><p class="c6 c36"><span class="c5">LTXN</span><span class="c2 c1">&nbsp;Alpha版本上线测试；</span></p><p class="c6 c36"><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;官方App上线测试；</span></p><p class="c6 c36"><span class="c2 c1">商户接入测试；</span></p><p class="c6 c36"><span class="c2 c1">交易试运行；</span></p><p class="c6 c36"><span class="c2 c1">拓展合作收单方。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c41" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">第四阶段</span></p></td>
+     <td class="c16" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">2019Q4-2020Q2</span></p></td>
+     <td class="c42" colspan="1" rowspan="1"><p class="c6 c36"><span class="c5">LTXN</span><span class="c2 c1">&nbsp;Beta版本上线，完成安全测试；</span></p><p class="c6 c36"><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;官方支付SDK开放；</span></p><p class="c6 c36"><span class="c2 c1">进一步拓展收单方。</span></p></td>
+    </tr>
+    <tr class="c31">
+     <td class="c41" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">第五阶段</span></p></td>
+     <td class="c16" colspan="1" rowspan="1"><p class="c17"><span class="c2 c1">2020Q3-2020Q4</span></p></td>
+     <td class="c42" colspan="1" rowspan="1"><p class="c6 c36"><span class="c1">APP、SDK以及</span><span class="c5">LTXN</span><span class="c2 c1">&nbsp;持续迭代；</span></p><p class="c6 c36"><span class="c2 c1">应用场景不断增加；</span></p><p class="c6 c36"><span class="c2 c1">持续拓展收单合作，增强收单服务的稳定性。</span></p></td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="c10"><span class="c2 c1"></span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c10"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="9">
+   <li class="c51"><h2 id="h.3gvecoukx004" style="display:inline"><span class="c1">组织架构</span><span class="c0">介绍</span></h2></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c14"><h3 id="h.7j48jbfcf4s" style="display:inline"><span class="c5 c35">LITE</span><span class="c8 c35">X</span><span class="c38 c1">&nbsp;社区基金会</span></h3></li>
+  </ol>
+  <p class="c15"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;社区基金会设立于新加坡，该机构是 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;社区的法律主体，负责 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的技术研发、业务运营和市场推广，同时承担所有对 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;的法律责任。 </span></p>
+  <p class="c15"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会设立有决策委员会作为最高决策机构行使管理和约束基金会各执行机构的权利。决策委员会任期 3 年，任期满后将由 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;社区选举产生。</span></p>
+  <p class="c15"><span class="c2 c1">下属各执行部门: </span></p>
+  <ul class="c13 lst-kix_asmkha7gn94j-0 start">
+   <li class="c18 c9"><span class="c2 c1">技术部</span></li>
+  </ul>
+  <p class="c15"><span class="c1">主要负责 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">社区开源项目的技术路线制定、方案选型、架构设计、项目研发和管理、Github 代码库更新和维护等工作。 </span></p>
+  <ul class="c13 lst-kix_w163sfve23ig-0 start">
+   <li class="c18 c9"><span class="c2 c1">运营部 </span></li>
+  </ul>
+  <p class="c15"><span class="c1">主要负责 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;用户社区的运营和管理，包括社区活动策划、活动执行和社区激励 计划的执行等工作。 </span></p>
+  <ul class="c13 lst-kix_evcahfjw456d-0 start">
+   <li class="c18 c9"><span class="c2 c1">市场部 </span></li>
+  </ul>
+  <p class="c15"><span class="c2 c1">主要负责社区品牌传播和商业拓展，完善社区生态建设。 </span></p>
+  <ul class="c13 lst-kix_8ztss21x3xi2-0 start">
+   <li class="c18 c9"><span class="c2 c1">人事财务部 </span></li>
+  </ul>
+  <p class="c15"><span class="c1">主要负责 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;基金会志愿者招募，管理基金会成员日常财务相关事务管理。 </span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <p class="c15 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="2">
+   <li class="c14"><h3 id="h.b8swysir6jpw" style="display:inline"><span class="c1">核心</span><span class="c38 c1">团队</span></h3></li>
+  </ol>
+  <ul class="c13 lst-kix_2yalrf6ykvdr-0 start">
+   <li class="c18 c25 c75"><span class="c2 c19">Guanghong Xu</span></li>
+  </ul>
+  <p class="c4"><span class="c2 c1">毕业于北京大学数学系密码学专业、伊州理工应用数学和电脑科学专业，研究方向为PKI加密体系。曾在VeriSign做数字认证相关工作、在Deloitte德勤任风险策略和信息安全顾问，参与过VISA在美国IPO时的支付信息加密合规认证，以及苹果、艺电(EA)、博通(Broadcom)等企业的信息加密和数字认证体系等顶级全球项目，现任Kaiser企业风险战略总监，具有丰富的密码学和商业应用经验。</span></p>
+  <p class="c4 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="3">
+   <li class="c78 c83"><h3 id="h.yywncfkfs2yt" style="display:inline"><span class="c1">合作伙伴团</span><span class="c1">队</span></h3></li>
+  </ol>
+  <ul class="c13 lst-kix_kruyzwq6gool-0 start">
+   <li class="c18 c27 c25"><span class="c2 c19">王硕斌</span></li>
+  </ul>
+  <p class="c4"><span class="c2 c1">北京大学计算机系本科（2003-2007）硕士（2007-2010），全球最大的去中心化支付产品——易宝「非银行卡支付」产品运营负责人，连续创业者，北京大学CEO俱乐部执行理事，区块链技术信仰者和实践者。</span></p>
+  <ul class="c13 lst-kix_kruyzwq6gool-0">
+   <li class="c18 c27 c25"><span class="c2 c19">张化强</span></li>
+  </ul>
+  <p class="c4"><span class="c1">北京大学计算机系本科（2003-2007）硕士（2007-2010），区块链专家，网络安全专家，全栈工程师，</span><span class="c5">LTXN</span><span class="c2 c1">设计者，曾就职于IBM、新浪微博等平台担任高级研发工程师。</span></p>
+  <ul class="c13 lst-kix_kruyzwq6gool-0">
+   <li class="c18 c27 c25"><span class="c19">娄焕庆</span></li>
+  </ul>
+  <p class="c4"><span class="c2 c1">北京大学计算机系本科（2007-2011）硕士（2011-2014），区块链专家，项目架构师，全栈工程师，有丰富的项目经验，擅长结合产品需求和前沿技术设计解决方案。</span></p>
+  <ul class="c13 lst-kix_kruyzwq6gool-0">
+   <li class="c18 c25 c27"><span class="c2 c19">褚天舒</span></li>
+  </ul>
+  <p class="c23"><span class="c2 c1">哆啦宝创始合伙人兼产品副总裁，原易宝支付非银行卡项目高级产品运营，曾任百度身边创始团队产品经理。北京航空航天大学计算机科学与技术专业学士，硕士。</span></p>
+  <p class="c23"><span class="c2 c1">哆啦宝是国内领先的线下支付营销企业，排名前三的微信支付服务商。每天支付成交超过200万笔。</span></p>
+  <p class="c23 c32"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="4">
+   <li class="c14"><h3 id="h.h59lhbpr4t1l" style="display:inline"><span class="c38 c1">基石投资人及顾问</span></h3></li>
+  </ol>
+  <p class="c18 c25 c32"><span class="c2 c1"></span></p>
+  <ul class="c13 lst-kix_1tuko2snuoh4-0 start">
+   <li class="c18 c25 c73"><span class="c19">余</span><span class="c19">晨 </span><span class="c2 c1">- 投资人</span></li>
+  </ul>
+  <p class="c4"><span class="c2 c1">易宝支付联合创始人、总裁。毕业于北京大学计算机系，在互联网、电子商务和软件领域有20年的经验，曾荣获『中国手机圈影响力金英奖100人』荣誉榜单以及eWorld 2013电子商务世界『2013年度EC100中国电商营销百人风云会风云人物』。畅销书《看见未来：改变互联网世界的人们》作者。</span></p>
+  <p class="c4 c32"><span class="c2 c1"></span></p>
+  <ul class="c13 lst-kix_plqcrb5nhrzr-0 start">
+   <li class="c18 c27 c25"><span class="c19">常大维</span><span class="c1">&nbsp;-</span><span class="c19">&nbsp;</span><span class="c2 c1">投资人</span></li>
+  </ul>
+  <p class="c4"><span class="c2 c1">哆啦宝创始人兼CEO，原易宝支付创始人兼CTO，曾任硅谷Riverside公司高级软件工程师。北京大学物理学学士，马里兰大学计算机工程硕士，美国硅谷华人工程师协会会员。</span></p>
+  <p class="c4 c32"><span class="c2 c1"></span></p>
+  <ul class="c13 lst-kix_plqcrb5nhrzr-0">
+   <li class="c18 c27 c25"><span class="c19">陈斌</span><span class="c2 c1">&nbsp;- 顾问</span></li>
+  </ul>
+  <p class="c4"><span class="c1">前PayPal资深架构师。1989年获得吉林大学硕士学位，曾任日立美国系统集成总监、Abacus首席架构师、Nokia美国互联网应用首席工程师，丰富的海外经历，多年的支付行业架构经验。曾翻译出版《架构及未来》、《架构真经》和《数据即未来-大数据王者之道》，是最前沿技术的实践者和布道者。</span></p>
+  <hr style="page-break-before:always;display:none;" />
+  <p class="c18 c25 c32 c76"><span class="c2 c1"></span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-0" start="10">
+   <li class="c62"><h2 id="h.oh4d4oj3cln4" style="display:inline"><span class="c0">风险声明</span></h2></li>
+  </ol>
+  <ol class="c13 lst-kix_5lmf583lwsy-1 start" start="1">
+   <li class="c61"><h3 id="h.t8oi7bmhp3m2" style="display:inline"><span class="c38 c1">风险提示</span></h3></li>
+  </ol>
+  <p class="c15"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会认为，在 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的开发、维护和运营过程中存在众多风险，这其中很多都超出了 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会的控制。每个 </span><span class="c5">LXT</span><span class="c1">&nbsp;代币参与者应仔细阅读、理解并考虑下述风险，慎重决定是否参与代币互换计划。若参与到 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;代币互换计划则将视参与者已充分知晓并同意接受下述风险: </span></p>
+  <ul class="c13 lst-kix_jn13aok4nsi2-0 start">
+   <li class="c18 c9"><span class="c2 c1">法律政策和监管风险</span></li>
+  </ul>
+  <p class="c15"><span class="c1">加密代币正在被或可能被各个不同国家的主管机关所监管。在各个不同国家</span><span class="c1">，</span><span class="c5">LXT</span><span class="c1">&nbsp; 可能随时被定义为虚拟商品、数字资产或甚至是证券或货币，因此在某些国家之中按当地监管要求，</span><span class="c5">LXT</span><span class="c1">&nbsp;可能被禁止交易或持有。如果监管主体出台相关规定，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会可能被勒令暂停或终止任何关于本次代币互换计划。 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的开发、营销、宣传或其他方面也可能受到严重影响、阻碍或被终结。 由于监管政策随时可能变化，任何国家之中现有的对于 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;或本次公开售卖计划的监管许可或容忍可能只是暂时的。本次 </span><span class="c5">LXT</span><span class="c1">&nbsp;公开互换计划若被提前终止，此时持有者可能由于以太币的价格波动以及 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;基金会的支出而仅被部分退还其支付的金额。 </span></p>
+  <ul class="c13 lst-kix_htliiqw3yi0z-0 start">
+   <li class="c9 c18"><span class="c2 c1">项目团队风险</span></li>
+  </ul>
+  <p class="c15"><span class="c1">当前区块链技术领域团队、项目众多，竞争激烈,存在较强的市场竞争和项目运营压力。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;项目能否在诸多优秀项目中突围，受到广泛认可,既与自身团队能力、愿景规划等相关,也受到市场竞争影响,包括可能面临恶性竞争。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">社区核心成员拥有多年的保险行业及区块链技术积累，可以凝聚起更多在区块链技术领域和保险领域的人才加入社区，但也不能排除会有社区核心人员离开、内部发生冲突等导致 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;项目整体受到负面影响的可能性。 </span></p>
+  <ul class="c13 lst-kix_n0c0bcgwnq2z-0 start">
+   <li class="c18 c9"><span class="c2 c1">技术风险 </span></li>
+  </ul>
+  <p class="c15"><span class="c1">计算机技术正在不断发展，密码学正在不断进步，无法保证任何时候绝对的安全性，这可能导致持有人的 </span><span class="c5">LXT</span><span class="c1">&nbsp;被盗、失窃、消失、毁灭或贬值。尽管 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会会努力维护 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">网络的安全，但并不能保证 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;不存在弱点或权限，且任何人均有可能故意或无意地将弱点或缺陷带入 </span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">的核心基础设施要素之中，对这些弱点或缺陷 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会无法通过其采用的安全措施预防或弥补。 这可能最终导致参与者的 </span><span class="c5">LXT</span><span class="c1">&nbsp;或其他数字代币丢失。此外</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp; 的源代码可能存在某些瑕疵、错误、缺陷和漏洞，这可能使得用户无法使用特定功能，暴露用户的信息或产生其他问题。如果确有此类瑕疵，将损害 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的可用性、 稳定性和/或安全性，并因此对 </span><span class="c5">LXT</span><span class="c1">&nbsp;的价值造成负面影响。公开的源代码以透明为根本，以促进源自于社区的对代码的鉴定和问题解决</span><span class="c1">。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会将与 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;社区紧密合作，今后持续改进、优化和完善 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的源代码。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的快速发展将伴随着交易量的陡增及对处理能力的需求。若处理能力的需求超过网络内届时结点所能提供的负载，则 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;网络可能会瘫痪或停滞，且可能会产错误交易。在最坏情况下，任何人持有的 </span><span class="c5">LXT</span><span class="c1">&nbsp;可能会丢失。这些事件将可能损害 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的可使用性、稳定性和安全性以及 </span><span class="c5">LXT</span><span class="c1">&nbsp;的价值。此外 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;仍在开发阶段，由于 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;系统的技术复杂性，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会可能不时会面临无法预测或无法克服的困难。因此</span><span class="c1">，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的开发可能会由于任何原因而在任何时候失败或放弃(例如由于缺乏资金)。开发失败或放弃将导致 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;无法交付给本次互换计划的参与者。 </span></p>
+  <ul class="c13 lst-kix_mf05ivszpoq5-0 start">
+   <li class="c18 c9"><span class="c2 c1">安全风险 </span></li>
+  </ul>
+  <p class="c15"><span class="c1">来自外部的攻击将可能使 &nbsp;</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp; 系统遭受负面影响、停滞、瘫痪甚至计算错误，并因此导致在此之上的交易被延迟甚至暂时无法执行，也可能造成数据错误、崩溃或丢失，损害 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的可用性、可靠性、安全性以及 </span><span class="c5">LXT</span><span class="c1">&nbsp;的价值。此外，可能会有人企图盗窃 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会所收到的公开售卖所获资金(包括已转换成法币的部分)。该类盗窃或盗窃企图可能会影响 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会为 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;开发提供资金的能力。尽管</span><span class="c1">&nbsp;</span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;基金会将会采取措施保护众筹资金的安全，但盗窃仍很难被彻底阻止。 </span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-0 start">
+   <li class="c18 c9"><span class="c2 c1">其他可能的风险 </span></li>
+  </ul>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1 start">
+   <li class="c18 c24"><span class="c2 c1">源代码升级风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的源代码是开源的且可能被 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;社区任何成员不时升级、修正、修改或更改。任何人均无法预料或保证某项升级、修正、 修改或更改的准确结果。因此，任何升级、修正、修改或更改可能导致无法预料或非预期的结果，从而对 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的运行或 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;的价值造成重大不利影响。</span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c1">未经授权认领 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;的风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c1">任何通过解密或破解 </span><span class="c5">LXT</span><span class="c1">&nbsp;持有者密码而获得注册邮箱或注册账号访问权限的人士，将能够恶意获取 </span><span class="c5">LXT</span><span class="c1">&nbsp;持有者的 </span><span class="c5">LXT</span><span class="c1">&nbsp;代币。 据此，持有者的 </span><span class="c5">LXT</span><span class="c1">&nbsp;代币可能会被发送至其他人的 </span><span class="c5">LXT</span><span class="c1">&nbsp;地址，而这种发送是不可撤销、不可逆转的。每个 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;持有者应当采取诸如以下的措施妥善维护其注册邮箱或注册账号的安全性:(i)使 复杂、高安全性密码;(ii)不打开或回复任何欺诈邮件; &nbsp;(iii)严格保密其机密或个人信息以及其他相关安全措施。 </span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c2 c1">市场风险: </span></li>
+  </ul>
+  <p class="c18 c25 c44"><span class="c5">LXT</span><span class="c1">&nbsp;的价值很大程度上取决于 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;平台的市场发展和用户接受程度</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;并不预期在发行后的很短时间内就广受欢迎、盛行或被普遍使用。在最坏情况下</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;甚至可能被长期边缘化，仅吸引很小一批使用者。 相比之下，很大一部分 </span><span class="c5">LXT</span><span class="c1">&nbsp;需求可能具有投机性质。缺乏用户可能导致 &nbsp;</span><span class="c5">LXT</span><span class="c1">&nbsp;市场价格波动增大从而影响 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的长期发展。出现这种价格波动时</span><span class="c1">，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会不会也没有责任稳定或影响 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;的市场价格。 </span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c2 c1">流动性风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c5">LXT</span><span class="c1">&nbsp;既不是任何个人、实体、中央银行或国家组织发行的货币， 也没有任何硬资产或被其他信用所支持。</span><span class="c5">LXT</span><span class="c1">&nbsp;在市场上的流通和交易并不是 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会的职责或追求。</span><span class="c5">LXT</span><span class="c1">&nbsp;的交易仅基于相关市场参与者对其价值达成 的共识。任何人士均无义务从 </span><span class="c5">LXT</span><span class="c1">&nbsp;持有者处兑换任何</span><span class="c5">LXT</span><span class="c1">，也没有任何人士能够 在任何程度上保证任何时刻 </span><span class="c5">LXT</span><span class="c1">&nbsp;的流通性或市场价格。</span><span class="c5">LXT</span><span class="c1">&nbsp;持有者若要转让 &nbsp;</span><span class="c5">LXT</span><span class="c1">，该 </span><span class="c5">LXT</span><span class="c1">&nbsp;持有者需寻找一名或多名有意人士进行互换。该过程可能花费甚巨、耗时长并且最终可能并不成功。此外，可能没有加密代币交易所或其他市场上线 </span><span class="c5">LXT</span><span class="c2 c1">&nbsp;供公开交易。</span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c2 c1">价格波动风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c1">若在公开市场上交易，加密代币通常价格波动剧烈。短期内价格震荡经常发生。该价格可能以比特币、以太币、美元或其他法币计价。这种价格波动可能由于市场力量(包括投机买卖)、监管政策变化、技术革新、交易所的可获得性以及其他客观因素造成，这种波动也反映了供需平衡的变化。无论 是否存在 </span><span class="c5">LXT</span><span class="c1">&nbsp;交易的二级市场，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会对任何二级市场的 </span><span class="c5">LXT</span><span class="c1">&nbsp;交易不承担责任也没有义务稳定 </span><span class="c5">LXT</span><span class="c1">&nbsp;的价格波动，且对此也并不关心。</span><span class="c5">LXT</span><span class="c1">&nbsp;交易价格所涉风险需由 </span><span class="c5">LXT</span><span class="c1">&nbsp;交易者自行承担</span><span class="c1">。</span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c2 c1">竞争风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的底层协议是基于开源电脑软件。没有任何人士主张对该源代码的版权或其他知识产权权利。因此，任何人均可合法拷贝、复制、重制、设计、修改、升级、改进、重新编码、重新编程或以其他方式利用 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;的源代码或底层协议，以开发具有竞争性的协议、软件、系统、虚拟平台、虚拟机 或智能合约从而与 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;竞争，或甚至赶超或取代 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会对此无法控制。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会在任何情况下均不可能消除、防止、限制或降低这种旨在与 &nbsp;</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;竞争或取代 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;的竞争性努力。</span></p>
+  <ul class="c13 lst-kix_hexr6ot1u2n3-1">
+   <li class="c18 c24"><span class="c2 c1">信息披露不足风险</span></li>
+  </ul>
+  <p class="c18 c44 c25"><span class="c1">截止到本白皮书发布日，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">仍在开发阶段，其哲学理念、共识机制、算法、代码和其他技术细节和参数可能经常且频繁地更新和变化。尽管本白皮书包含了 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;最新的关键信息，其并不绝对完整，且仍会被 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会为了特定目的而不时进行调整和更新。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会无能力且无义务随时告知参与者 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;开发中的每个细节(包括其进度和预期里程碑，无论是否推迟)，因此必然会让持有者未能及时且充分地接触到 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;开发中新产生的信息。信息披露的充分是可避免且合乎情理的。 </span></p>
+  <ol class="c13 lst-kix_5lmf583lwsy-1" start="2">
+   <li class="c61"><h3 id="h.2yyhhodfezve" style="display:inline"><span class="c38 c1">免责声明</span></h3></li>
+  </ol>
+  <p class="c15"><span class="c1">本白皮书仅作为传达信息之用，文档内容仅供参考，不构成出售数字商品、 股票或证券的任何投资买卖建议、教唆或邀约。此类邀约必须通过机密备忘录的 形式进行，且须符合相关的证券法律和其他法律。本文档内容不得被解释为强迫参与互换。任何与本白皮书相关的行为均不得视为参与互换，包括要求获取本白皮书的副本或向他人分享本白皮书。参与互换则代表参与者已达到年龄标准，具备完整的民事行为能力，与 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会签订的合同是真实有效的。所有参与者均为自愿签订合同，并在签订合同之前对 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;进行了清晰必要的了解。 </span></p>
+  <p class="c15"><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会将不断进行合理尝试，确保本白皮书中的信息真实准确。开发过程中，平台可能会进行更新，包括但不限于平台机制、代币及其机制、代币分配情况。文档的部分内容可能随着项目的进展在新版白皮书中进行相应调整， </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会将通过在网站上发布公告或新版白皮书等方式，将更新内容公布于众。请参与者务必及时获取最新版白皮书，并根据更新内容及时调整自己的决策。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会概不承担参与者因：(i)依赖本文档内容、(ii)本文信息不准确之处，以及(iii)本文导致的任何行为而造成的损失。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会将不遗余力实现文档中所提及的目标，然而基于不可抗力的存在，</span><span class="c5">LITE</span><span class="c8">X </span><span class="c2 c1">基金会不能完全做出完成承诺。 </span></p>
+  <p class="c15"><span class="c5">LXT</span><span class="c1">&nbsp;是平台发生效能的重要工具，并不是一种投资品。拥有 </span><span class="c5">LXT</span><span class="c1">&nbsp;不代表授予其拥有者对 </span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;平台的所有权、控制权、决策权。</span><span class="c5">LXT </span><span class="c2 c1">作为一种加密代币不属于以下类别：(a)任何种类的货币；(b)证券；(c)法律实体的股权；(d)股票、债 券、票据、认股权证、证书或其他授予任何权利的文书。 </span></p>
+  <p class="c15"><span class="c5">LXT</span><span class="c1">&nbsp;的增值与否取决于市场规律以及应用落地后的需求，其可能不具备任何价值，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会不对其增值做出承诺，并对其因价值增减所造成的后果概不负责。在适用法律允许的最大范围内，对因参与互换所产生的损害及风险，包括但不限于直接或间接的个人损害、商业盈利的丧失、商业信息的丢失或任何其它经济损失，</span><span class="c5">LITE</span><span class="c8">X</span><span class="c1">&nbsp;基金会不承担责任。</span><span class="c5">LITE</span><span class="c8">X </span><span class="c1">平台遵守任何有利于行业健康发展的监管条例以及行业自律申明等。参与者参与即代表将完全接受并遵守此类检查。同时，参与者披露用以完成此类检查的所有信息必须完整准确。</span><span class="c5">LITE</span><span class="c8">X</span><span class="c2 c1">&nbsp;平台明确向参与者传达了可能的风险，参与者一旦参与互换，代表其已确认理解并认可细则中的各项条款说明，接受本平台的潜在风险，后果自担。</span></p>
+  <p class="c10"><span class="c2 c1"></span></p>
+  <div>
+   <p class="c25 c36 c32 c77"><span class="c2 c20"></span></p>
+  </div>
+  <hr class="c72" />
+  <div>
+   <p class="c25 c36 c49"><a href="#ftnt_ref1" id="ftnt1">[1]</a><span class="c28">&nbsp;Visa从未提供过加密货币兑换加密货币的服务，联名卡的功能仅限向TenX等联名方提供结算回调，法币依然是由联名方向Visa提供的。</span></p>
+  </div>
+  <div>
+   <p class="c49 c25 c36"><a href="#ftnt_ref2" id="ftnt2">[2]</a><span class="c46 c54">&nbsp;参见国外媒体的报道：</span><span class="c71 c46 c54 c80"><a class="c3" href="https://www.google.com/url?q=https://www.cnbc.com/2018/01/05/some-cryptocurrency-backed-cards-dropped-from-visa-network.html&amp;sa=D&amp;ust=1521431429360000&amp;usg=AFQjCNFRNoQFzzTq1yioP9nw39sxiYzycw">Some cryptocurrency-backed debit cards dropped from Visa network, leaving users scrambling</a></span></p>
+  </div>
+  
+  <script src="lib/jquery/jquery.min.js"></script>
+  
+  <script>
+    function sync() {
+        var windowHeight = window.innerHeight;
+        
+        $("ol.c13").each(function(){
+            var offset = $(this)[0].getBoundingClientRect()
+            if( offset.bottom + 95 > windowHeight * 0.1 && offset.top < windowHeight * 0.5 ) {
+                var id = $(this).find('span').parent().attr('id')
+                var nav = $("nav.toc").find("a[href='#"+id+"']")
+                $(".toc ul a").attr('style', '')
+                nav.attr('style', 'border-left: 4px solid #18d26e; padding-left: 3px;')
+                return false;
+			}
+        })
+    }
+  
+    $(document).ready(function(){
+        sync();
+    
+        $(".toc ul a").each(function(){
+            $(this).unbind().bind('click', function(){
+                $(".toc ul a").attr('style', '');
+                $(this).attr('style', 'border-left: 4px solid #18d26e; padding-left: 3px;');
+            })
+        })
+        
+        window.addEventListener( 'scroll', sync, false );
+    })
+  </script>
+  
+ </body>
+</html>

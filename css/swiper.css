@@ -1,0 +1,11 @@
+#demo {
+    overflow:hidden;
+    height:100px;
+}
+#demo a {
+    line-height: 30px;
+    text-align: center;
+}
+#indemo {
+    height: 100%;
+}
