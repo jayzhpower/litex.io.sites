@@ -22,9 +22,19 @@
     <link href="../css/main_style.css" rel="stylesheet" />
     <link href="../css/swiper.css" rel="stylesheet" /></head>
     <link href="../css/style.css" rel="stylesheet" />
-    
-  
+
   <body>
+  
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+		    <div class="modal-content">
+			    <div class="modal-body text-light bg-primary">
+			    	We are currently updating the english version, please check again later :)
+			    </div>
+		    </div>
+    	</div>
+    </div>
+
     <div class="telegram_layer">
       <a href="https://t.me/litex_official" style="display: block; height: 44px; width: 44px; cursor: pointer;"></a>
     </div>
@@ -62,7 +72,7 @@
                 <span class="caret"></span></button>
               <ul class="dropdown-menu" role="menu" style="width: 100%;">
                 <li>
-                  <a href="#" target="">英文版</a></li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#modal">英文版</a></li>
                 <li>
                   <a href="../LITEX_WP_CN_NEW.pdf" target="_blank">中文版</a></li>
               </ul>

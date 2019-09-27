@@ -21,7 +21,16 @@
   <link href="../css/main_style.css" rel="stylesheet" />
   <link href="../css/swiper.css" rel="stylesheet" />
  </head> 
- <body> 
+ <body>
+   <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	   <div class="modal-content">
+		    <div class="modal-body text-light bg-primary">
+			  	We are currently updating the english version, please check again later :)
+		    </div>
+	    </div>
+  	</div>
+  </div>
   <div class="telegram_layer"> 
    <a href="https://t.me/litex_official" style="display: block; height: 44px; width: 44px; cursor: pointer;"></a> 
   </div> 
@@ -64,7 +73,7 @@
       <div class="btn-group"> 
        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="position: relative; background: #036EB4; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">White Paper Draft <span class="caret"></span></button> 
        <ul class="dropdown-menu" role="menu" style="width: 100%;"> 
-        <li> <a href="#" target="">English Version</a></li> 
+        <li> <a href="javascript:void(0);" data-toggle="modal" data-target="#modal">English Version</a></li> 
         <li> <a href="..//LITEX_WP_CN_NEW.pdf" target="_blank">Chinese Version</a></li> 
        </ul> 
       </div> 
