@@ -21,7 +21,16 @@
   <link href="../css/main_style.css" rel="stylesheet" />
   <link href="../css/swiper.css" rel="stylesheet" />
  </head> 
- <body> 
+ <body>
+   <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	   <div class="modal-content">
+		    <div class="modal-body text-light bg-primary">
+			  	We are currently updating the english version, please check again later :)
+		    </div>
+	    </div>
+  	</div>
+  </div>
   <div class="telegram_layer"> 
    <a href="https://t.me/litex_official" style="display: block; height: 44px; width: 44px; cursor: pointer;"></a> 
   </div> 
@@ -65,12 +74,15 @@
        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="position: relative; background: #036EB4; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;">White Paper Draft <span class="caret"></span></button> 
        <ul class="dropdown-menu" role="menu" style="width: 100%;"> 
         <li> <a href="..//wp_en.pdf" target="_blank">English Version</a></li> 
-        <li> <a href="..//wp_zh-CN" target="_blank">Chinese Version</a></li> 
+        <li> <a href="..//LITEX_WP_CN_NEW.pdf" target="_blank">Chinese Version</a></li> 
        </ul> 
       </div> 
       <button type="button" class="btn yellow-paper-draft" data-toggle="tooltip" data-placement="bottom" title="" style="position: relative; background: #878787; border: 0; padding: 10px 15px; color: #fff; transition: 0.4s;cursor: pointer; z-index: 2;" data-original-title="comming soon">Yellow Paper Draft <span class="caret"></span></button> 
       <div style="padding-top: 1rem;"> 
-       <a href="..//litex_ltxn.pdf" target="_blank" style="position: relative; border: 0; padding: 10px 15px; color: #B9E0A5; transition: 0.4s; cursor: pointer; z-index: 2;">[ Intro PPT ]</a>
+       <!--<a href="..//litex_ltxn.pdf" target="_blank" style="position: relative; border: 0; padding: 10px 15px; color: #B9E0A5; transition: 0.4s; cursor: pointer; z-index: 2;">[ Intro PPT ]</a>
+	-->
+
+        <a href="../res/notices/dispute_rumour_20191231_en.html" target="_blank" style="position: relative; border: 0; padding: 10px 15px; color: #B9E0A5; transition: 0.4s; cursor: pointer; z-index: 2;">[ Statements on recent rumours about LITEX ]</a></div>
       </div> 
      </div> 
     </div> 
@@ -248,7 +260,7 @@
         </div> 
         -->
         <div style="padding: 2.5rem 2.5rem 1rem 2.5rem; margin-left: 0rem; color: #000;"> 
-         <h3 style="font-size: 1.5em; font-family: 'Open Sans', sans-serif;">Wang Shuobin</h3> 
+         <h3 style="font-size: 1.5em; font-family: 'Open Sans', sans-serif;">Leo Wang</h3> 
          <p style="line-height: 1.6rem; margin-top: 2rem; max-height: 15.5rem; overflow: auto;">Bachelor (2003-2007) and master (2007-2010) in Computer Science of Peking University, Leo has rich project operation experience and is responsible for the overall strategic plans for LITEX. He was the former product operation director of the star product &quot;Non-bank card payment&quot; of Yeepay. As a serial entrepreneur, Wang founded the ByKernel- a mobile game payment company and led the team to achieve the gross profit of 20 million each year. Wang has rich industrial resources and experience in the game and payment field, he is also the executive director of CEO club in Peking University. <br /></p>
         </div> 
        </div> 
@@ -281,19 +293,6 @@
         </div> 
        </div> 
       </div> 
-      <div class="col-md-4 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="500ms" style="padding-top: 6.8rem;"> 
-       <div style="position: relative; margin: 0 0.5rem; min-height: 250px; box-shadow: #f8f8f8 0 15px 20px 10px; border-radius: 1.2rem; color: #000;"> 
-        <div class="content-grid-text" style="padding: 2.5rem 2.5rem 1rem 2.5rem;"> 
-         <h3 style="font-size: 1.5rem; font-family: 'Open Sans', sans-serif; text-align: center;">Laura Li</h3> 
-         <p style="line-height: 1.6rem; margin-top: 2rem; max-height: 20rem; overflow: auto;">Bachelor (2008-2013) in Peking University Health Science Center, Master (2013-2016) in Columbia University, MBA in CKGSB. Laura is the blockchain evangelist and set up column in 8 BTC News, Cointime and Bihu, etc.. She is currently responsible for the LITEX marketing development and community management. As a serial entrepreneur in several start-ups, Laura ever founded the financial media with annual exposure of over 100 million, she also founded the blockchainplanet.io and Gaia University, the latter product copyright was acquired by the Electronic Industry Press.</p> 
-         <!--
-         <div class="ser-grid" style="position: absolute; top: -10%; left: 40%; width: 85px; height: 85px; box-shadow: #f8f8f8 0 15px 20px 10px;"> 
-          <img src="../img/team/member-5.jpg" style="width: 100%; height: 100%; border-radius: 1.2rem;" />
-         </div> 
-         -->
-        </div> 
-       </div> 
-      </div> 
      </div> 
     </div> 
    </section> 
@@ -304,7 +303,7 @@
      </header> 
      <div id="investor-large-part"> 
       <div class="owl-carousel testimonials-carousel"> 
-       <div class="testimonial-item"> 
+       <!-- <div class="testimonial-item"> 
         <div style="margin: 0 2rem; background: -webkit-linear-gradient(-45deg, #706cFd, #63d0fd); background: linear-gradient(-45deg, #63d0fd, #706cFd); box-shadow: #f8f8f8 0 15px 20px 10px; border-radius: 2rem;"> 
          <div class="row" style="padding: 4.6rem;"> 
           <div class="col-md-4"> 
@@ -319,7 +318,7 @@
           </div> 
          </div> 
         </div> 
-       </div> 
+       </div> -->
        <div class="testimonial-item"> 
         <div style="margin: 0 2rem; background: -webkit-linear-gradient(-45deg, #706cFd, #63d0fd); background: linear-gradient(-45deg, #63d0fd, #706cFd); box-shadow: #f8f8f8 0 15px 20px 10px; border-radius: 2rem;"> 
          <div class="row" style="padding: 4.6rem;"> 
@@ -357,12 +356,12 @@
     </div> 
     <div id="investor-mobile-part" class="container" style="display: none;"> 
      <div class="owl-carousel investor-carousel"> 
-      <div class="testimonial-item"> 
+      <!-- <div class="testimonial-item"> 
        <img src="../img/advisor/advisor-3.jpg" class="testimonial-img" alt="" /> 
        <h3>Jeffrey Wernick</h3> 
        <h4>advisor</h4> 
        <p style="overflow-y: auto; height: 200px;">Graduated from the Chicago University with the PhD. in Economics and Finance. Jeffery was an early participator in blockchain industry and the angel investor in Uber and Airbnb. He is committed to promoting sharing economy, biomedical and blockchain technologies. Jeffery has launched a technology-focused venture capital firm and created a hedge fund company to invest in distressed and bankrupt companies, helping them to restructure the balance sheets. Jeffery plays an important role of promoting LITEX's internationalization and development.</p>
-      </div> 
+      </div> -->
       <div class="testimonial-item"> 
        <img src="../img/advisor/advisor-2.jpg" class="testimonial-img" alt="" /> 
        <h3> <a href="https://www.chicagobooth.edu/faculty/directory/c/lin-william-cong" target="_blank">William Cong</a></h3> 
@@ -403,7 +402,7 @@
         <dt>
          2018
         </dt> 
-        <dd class="pos-left clearfix"> 
+        <!-- <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #2CC2EA;"></div> 
          <div class="time" style="color: #2CC2EA;">
           Apr.4th
@@ -417,8 +416,8 @@
            </div> 
           </div> 
          </div> 
-        </dd> 
-        <dd class="pos-right clearfix"> 
+        </dd> -->
+        <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #3D53CB;"></div> 
          <div class="time" style="color: #3D53CB;">
           Apr.10th
@@ -433,7 +432,7 @@
           </div> 
          </div>
         </dd> 
-        <dd class="pos-left clearfix"> 
+        <dd class="pos-right clearfix"> 
          <div class="circ" style="background-color: #2CC2EA;"></div> 
          <div class="time" style="color: #2CC2EA;">
           Jun.25th
@@ -448,7 +447,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-right clearfix"> 
+        <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #3D53CB;"></div> 
          <div class="time" style="color: #3D53CB;">
           Jul.7th
@@ -463,7 +462,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-left clearfix"> 
+        <dd class="pos-right clearfix"> 
          <div class="circ" style="background-color: #2CC2EA;"></div> 
          <div class="time" style="color: #2CC2EA;">
           Jul.12th
@@ -478,7 +477,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-right clearfix"> 
+        <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #3D53CB;"></div> 
          <div class="time" style="color: #3D53CB;">
           Aug.8th
@@ -493,7 +492,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-left clearfix"> 
+        <dd class="pos-right clearfix"> 
          <div class="circ" style="background-color: #2CC2EA;"></div> 
          <div class="time" style="color: #2CC2EA;">
           Oct.15th
@@ -508,7 +507,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-right clearfix"> 
+        <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #3D53CB;"></div> 
          <div class="time" style="color: #3D53CB;">
           Oct.24th
@@ -523,7 +522,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-left clearfix"> 
+        <dd class="pos-right clearfix"> 
          <div class="circ" style="background-color: #2CC2EA;"></div> 
          <div class="time" style="color: #2CC2EA;">
           Dec.1st
@@ -538,7 +537,7 @@
           </div> 
          </div> 
         </dd> 
-        <dd class="pos-right clearfix"> 
+        <dd class="pos-left clearfix"> 
          <div class="circ" style="background-color: #3D53CB;"></div> 
          <div class="time" style="color: #3D53CB;">
           Dec.20th
@@ -596,19 +595,24 @@
         <div id="" style="display: grid;  grid-template-columns:20% repeat(auto-fill, 200px) 20% ">
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/01-blockfolio.png" style="width: 100px;" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/02-jinse.png" style="width: 100px" alt="" /></div>
-          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/03-ethfans.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/04-wanchain.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/05-matrix.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/06-vns.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/11-tp-logo.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/kcash-logo.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/maker.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/dForce.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/okex.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/mxc.png" style="width: 100px" alt="" /></div>
+          <!-- <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/03-ethfans.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/07-nervos.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/08-citahub.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/09-yikuailianxi.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/10-tanlian.png" style="width: 100px" alt="" /></div>
-          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/11-tp-logo.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/12-lianjinshu.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/13-wuya.png" style="width: 100px" alt="" /></div>
           <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/14-throne.png" style="width: 100px" alt="" /></div>
-          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/15-gaex.png" style="width: 100px" alt="" /></div>
+          <div style="display: flex; justify-content: center; align-items: center"><img src="../img/partners/15-gaex.png" style="width: 100px" alt="" /></div> -->
         </div>
 
       </div>
